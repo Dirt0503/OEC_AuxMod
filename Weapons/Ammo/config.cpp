@@ -1,8 +1,8 @@
 class CfgPatches
 {
-    class Dirts_OEC_Extension_Ammo
+    class OEC_Extension_Ammo
     {
-        addonRootClass = "Dirts_OEC_Extension_Weapons";
+        addonRootClass = "OEC_Extension_Weapons";
         requiredAddons[] = 
         {
             "A3_data_F",
@@ -36,7 +36,7 @@ class CfgAmmo
         model = "\rhsusf\addons\rhsusf_weapons\grenades_thrown\mk3a2\mk3a2";
         effectFly = "OEC_ParticleEffect_MK3A2";
         simulation = "shotNVGMarker";
-        soundFly[] = {"\DirtsOECExtension\Weapons\Ammo\sounds\OEC_5SEC_GRENFUSE.wss",20,1,200};
+        soundFly[] = {"\OECExtension\Weapons\Ammo\sounds\OEC_5SEC_GRENFUSE.wss",20,1,200};
         class NVGMarkers{};
     };
 

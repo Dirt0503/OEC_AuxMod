@@ -1,8 +1,8 @@
 class CfgPatches
 {
-    class Dirts_OEC_Extension_Gear_Uniforms
+    class OEC_Extension_Gear_Uniforms
     {
-        addonRootClass = "Dirts_OEC_Extension_Gear";
+        addonRootClass = "OEC_Extension_Gear";
         requiredAddons[] = 
         {
             "A3_data_F",

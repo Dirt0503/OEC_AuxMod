@@ -1,8 +1,8 @@
 class CfgPatches
 {
-    class Dirts_OEC_Extension_Weapons_WallhammerShotgun
+    class OEC_Extension_Weapons_WallhammerShotgun
     {
-        addonRootClass = "Dirts_OEC_Extension_Weapons";
+        addonRootClass = "OEC_Extension_Weapons";
         requiredAddons[] = 
         {
             "A3_data_F",

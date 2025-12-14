@@ -1,8 +1,8 @@
 class CfgPatches
 {
-    class Dirts_OEC_Extension_Weapons_APFSuppressor
+    class OEC_Extension_Weapons_APFSuppressor
     {
-        addonRootClass = "Dirts_OEC_Extension_Weapons";
+        addonRootClass = "OEC_Extension_Weapons";
         requiredAddons[] = 
         {
             "A3_data_F",

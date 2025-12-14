@@ -1,9 +1,9 @@
 class CfgPatches
 {
-    class Dirts_OEC_Extension
+    class OEC_Extension
     {
-        name = "Dirt's OEC Extension";
-        author = "Dirt";
+        name = "OEC Extension";
+        author = "Dirt & Petee";
         requiredAddons[] = 
         {
             "WBK_Combinus"
@@ -16,16 +16,16 @@ class CfgPatches
 class CfgMods
 {
     class Mod_Base;
-    class Dirts_OEC_Extension_Base: Mod_Base
+    class OEC_Extension_Base: Mod_Base
     {
-        dir = "@DirtsOECExtension";
-        name = "Dirt's OEC Extension";
-        picture = "\DirtsOECExtension\OEClogo1.paa";
-        logo = "\DirtsOECExtension\OEClogo1.paa";
-        logoSmall = "\DirtsOECExtension\OEClogo1.paa";
-        logoOver = "\DirtsOECExtension\OEClogo1.paa";
-        tooltip = "Dirt's OEC Extension";
-        tooltipOwned = "Dirt's OEC Extension";
+        dir = "@OECExtension";
+        name = "OEC Extension";
+        picture = "\OECExtension\OEClogo1.paa";
+        logo = "\OECExtension\OEClogo1.paa";
+        logoSmall = "\OECExtension\OEClogo1.paa";
+        logoOver = "\OECExtension\OEClogo1.paa";
+        tooltip = "OEC Extension";
+        tooltipOwned = "OEC Extension";
     };
 };
 
@@ -33,6 +33,6 @@ class Extended_PostInit_EventHandlers
 {
     class Dirts_Visor_Extension
     {
-        init = "call compile preprocessFileLineNumbers '\DirtsOECExtension\patchHelmets.sqf'";
+        init = "call compile preprocessFileLineNumbers '\OECExtension\patchHelmets.sqf'";
     };
 };

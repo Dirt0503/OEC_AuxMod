@@ -1,9 +1,9 @@
 class CfgPatches
 {
-    class Dirts_OEC_Extension_Gear
+    class OEC_Extension_Gear
     {
-        name = "Dirt's OEC Extension - Gear";
-        author = "Dirt";
+        name = "OEC Extension - Gear";
+        author = "Dirt & Petee";
         requiredAddons[] = 
         {
             "A3_data_F",
