@@ -101,14 +101,14 @@ class CfgWeapons
 	    		class Arms
     			{
 				    hitpointName = "HitArms";
-				    armor = 9;
+				    armor = 3;
 				    PassThrough = 0.08975;
                     explosionShielding = 0.8;
 		    	};
 	    		class Legs
     			{
 				    hitpointName = "Hitlegs";
-					armor = 9;
+					armor = 3;
 			    	PassThrough = 0.08975;
                     explosionShielding = 0.8;
 				};
@@ -402,14 +402,14 @@ class CfgWeapons
 	    		class Arms
     			{
 				    hitpointName = "HitArms";
-				    armor = 9;
+				    armor = 3;
 				    PassThrough = 0.08975;
                     explosionShielding = 0.8;
 		    	};
 	    		class Legs
     			{
 				    hitpointName = "Hitlegs";
-					armor = 9;
+					armor = 3;
 			    	PassThrough = 0.08975;
                     explosionShielding = 0.8;
 				};
