@@ -19,8 +19,8 @@ class CfgPatches
             "OEC_Overwatch_Uniform_TL_Vehicle",
             "OEC_Overwatch_Uniform_Recon_Vehicle",
             "OEC_Overwatch_Uniform_Elite_Vehicle",
-            "OEC_Overwatch_Uniform_Assassin_1_Vehicle",
-            "OEC_Overwatch_Uniform_Assassin_2_Vehicle",
+           /* "OEC_Overwatch_Uniform_Assassin_1_Vehicle",
+            "OEC_Overwatch_Uniform_Assassin_2_Vehicle",*/
             "OEC_Overwatch_Uniform_Wallhammer_Vehicle",
             "OEC_Overwatch_Uniform_APU_Vehicle"
         };
@@ -76,6 +76,11 @@ class CfgWeapons
             uniformClass = "OEC_Overwatch_Uniform_Soldier_Vehicle";
             scope = 2;
         };
+        class XtdGearInfo
+        {
+            model = "OEC_ACEX_Uniform_CMB_Soldier";
+            variant = "soldier";
+        };
     };
     class OEC_Overwatch_Uniform_AT: OEC_Overwatch_Uniform_Soldier
     {  
@@ -83,6 +88,11 @@ class CfgWeapons
         class ItemInfo: ItemInfo
         {
             uniformClass = "OEC_Overwatch_Uniform_AT_Vehicle";
+        };
+        class XtdGearInfo
+        {
+            model = "OEC_ACEX_Uniform_CMB_Soldier";
+            variant = "at";
         };
     };
     class OEC_Overwatch_Uniform_Medic: OEC_Overwatch_Uniform_Soldier
@@ -92,6 +102,11 @@ class CfgWeapons
         {
             uniformClass = "OEC_Overwatch_Uniform_Medic_Vehicle";
         };
+        class XtdGearInfo
+        {
+            model = "OEC_ACEX_Uniform_CMB_Soldier";
+            variant = "medic";
+        };
     };
     class OEC_Overwatch_Uniform_Recon: OEC_Overwatch_Uniform_Soldier
     {
@@ -99,6 +114,11 @@ class CfgWeapons
         class ItemInfo: ItemInfo
         {
             uniformClass = "OEC_Overwatch_Uniform_Recon_Vehicle";
+        };
+        class XtdGearInfo
+        {
+            model = "OEC_ACEX_Uniform_CMB_Soldier";
+            variant = "recon";
         };
     };
     class OEC_Overwatch_Uniform_TL: OEC_Overwatch_Uniform_Soldier
@@ -108,6 +128,11 @@ class CfgWeapons
         {
             uniformClass = "OEC_Overwatch_Uniform_TL_Vehicle";
         };
+        class XtdGearInfo
+        {
+            model = "OEC_ACEX_Uniform_CMB_Soldier";
+            variant = "tl";
+        };
     };
     class OEC_Overwatch_Uniform_Elite: OEC_Overwatch_Uniform_Soldier
     {
@@ -115,6 +140,11 @@ class CfgWeapons
         class ItemInfo: ItemInfo
         {
             uniformClass = "OEC_Overwatch_Uniform_Elite_Vehicle";
+        };
+        class XtdGearInfo
+        {
+            model = "OEC_ACEX_Uniform_CMB_Elite";
+            variant = "sl";
         };
     };
     class OEC_Overwatch_Uniform_Recon_TL: OEC_Overwatch_Uniform_Soldier
@@ -124,8 +154,13 @@ class CfgWeapons
         {
             uniformClass = "OEC_Overwatch_Uniform_Recon_TL_Vehicle";
         };
+        class XtdGearInfo
+        {
+            model = "OEC_ACEX_Uniform_CMB_Elite";
+            variant = "reconSL";
+        };
     };
-    class OEC_Overwatch_Uniform_Assassin_1: OEC_Overwatch_Uniform_Soldier
+   /* class OEC_Overwatch_Uniform_Assassin_1: OEC_Overwatch_Uniform_Soldier
     {
         displayName = "[OEC] Combine Assassin Uniform [1]";
         class ItemInfo: ItemInfo
@@ -140,7 +175,7 @@ class CfgWeapons
         {
             uniformClass = "OEC_Overwatch_Uniform_Assassin_2_Vehicle";
         };
-    };
+    };*/
 
     class OEC_Overwatch_Uniform_Wallhammer: OEC_Overwatch_Uniform_Soldier
     {
@@ -149,6 +184,7 @@ class CfgWeapons
         {
             uniformClass = "OEC_Overwatch_Uniform_Wallhammer_Vehicle";
         };
+        class XtdGearInfo{};
     };
     class OEC_Overwatch_Uniform_APF: OEC_Overwatch_Uniform_Soldier
     {
@@ -157,6 +193,7 @@ class CfgWeapons
         {
             uniformClass = "OEC_Overwatch_Uniform_APF_Vehicle";
         };
+        class XtdGearInfo{};
     };
 };
 
@@ -296,4 +333,52 @@ class CfgVehicles
         uniformClass = "OEC_Overwatch_Uniform_APF";
         model = "@Combain\CombainSuppressor.p3d";
     };
+};
+
+class XtdGearModels
+{
+    class CfgWeapons
+    {
+		class OEC_ACEX_Uniform_CMB_Soldier
+        {
+            label = "";
+            author = "OEC Extension";
+            options[] = { "variant" };
+            class variant
+            {
+                label = "Uniform Variants";
+                values[] = 
+                {
+                    "soldier",
+                    "at",
+                    "medic",
+					"tl",
+					"recon"
+                };
+                class soldier { label = "Soldier"; };
+                class at { label = "AT"; };
+                class medic { label = "Medic"; };
+				class tl { label = "Team Lead"; };
+				class recon { label = "Recon"; };
+            };
+        };
+
+        class OEC_ACEX_Uniform_CMB_Elite
+        {
+            label = "";
+            author = "OEC Extension";
+            options[] = { "variant" };
+            class variant
+            {
+                label = "Uniform Variants";
+                values[] = 
+                {
+                    "sl",
+                    "reconSL"
+                };
+                class sl { label = "Squad Lead"; };
+                class reconSL { label = "Recon SL"; };
+            };
+        };
+	};
 };

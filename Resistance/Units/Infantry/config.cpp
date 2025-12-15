@@ -66,11 +66,11 @@ class CfgFunctions
 
 class CfgPatches
 {
-    class OEC_Extension_Resistance_Units
+    class OEC_Extension_Resistance_Units_Infantry
     {
-        addonRootClass = "OEC_Extension_Resistance_Units_Infantry";
+        addonRootClass = "OEC_Extension_Resistance_Units";
         requiredAddons[] = {};
-        units[] = {};
+        units[] = {"OEC_Units_CIS_Infantry_Base", "OEC_Units_CIS_Rifleman", "OEC_Units_CIS_AT", "OEC_Units_CIS_Medic", "OEC_Units_CIS_JrSergeant", "OEC_Units_CIS_Sergeant", "OEC_Units_CIS_Crew", "OEC_Units_CIS_Heavy", "OEC_Units_CIS_Grenadier", "OEC_CIS_Drone", "OEC_Units_CIS_Spetsnaz", "OEC_Units_CIS_Scientist", "OEC_Units_CIS_Officer"};
         weapons[] = {};
     };
 };
@@ -475,8 +475,8 @@ class cfgVehicles
         editorSubCategory = "OEC_EdSubCat_Specials";
         uniformClass = "OEC_CIS_Uniform_6sh112";
         headgearList[] = {};
-        linkedItems[] = {"OEC_ModularCarrier", "OEC_APR", "ItemMap","ItemCompass","ItemWatch","ItemRadio"};
-        respawnLinkedItems[] = {"OEC_ModularCarrier", "OEC_APR", "ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+        linkedItems[] = {"OEC_CIS_Vest_ModularCarrier", "OEC_APR", "ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+        respawnLinkedItems[] = {"OEC_CIS_Vest_ModularCarrier", "OEC_APR", "ItemMap","ItemCompass","ItemWatch","ItemRadio"};
 		backpack = "OEC_CIS_Backpack_SCBA_Bag";
         weapons[] = {"OEC_Weapons_PKM","Throw","Put"};
         respawnWeapons[] = {"OEC_Weapons_PKM","Throw","Put"};

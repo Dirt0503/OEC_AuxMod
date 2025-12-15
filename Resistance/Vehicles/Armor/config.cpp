@@ -1082,7 +1082,7 @@ class CfgVehicles
 			class MainTurret: MainTurret
 			{
                 weapons[] = {"OEC_Weapons_DSHKM","OEC_Weapons_PKM"};
-				magazines[] = {"OEC_Magazine_127x100_100Rnd","OEC_Magazine_127x100_100Rnd","OEC_Magazine_127x100_100Rnd","OEC_Magazine_127x100_100Rnd","OEC_Magazine_127x100_100Rnd","OEC_150Rnd_762x51_Box","OEC_150Rnd_762x51_Box","OEC_150Rnd_762x51_Box","OEC_150Rnd_762x51_Box","OEC_150Rnd_762x51_Box","OEC_150Rnd_762x51_Box","OEC_150Rnd_762x51_Box","OEC_150Rnd_762x51_Box","OEC_150Rnd_762x51_Box","OEC_150Rnd_762x51_Box",};
+				magazines[] = {"OEC_Magazine_127x100_100Rnd","OEC_Magazine_127x100_100Rnd","OEC_Magazine_127x100_100Rnd","OEC_Magazine_127x100_100Rnd","OEC_Magazine_127x100_100Rnd","OEC_Magazine_762x51_150Rnd","OEC_Magazine_762x51_150Rnd","OEC_Magazine_762x51_150Rnd","OEC_Magazine_762x51_150Rnd","OEC_Magazine_762x51_150Rnd","OEC_Magazine_762x51_150Rnd","OEC_Magazine_762x51_150Rnd","OEC_Magazine_762x51_150Rnd"};
             };
         };
         class AnimationSources: AnimationSources

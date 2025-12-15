@@ -164,7 +164,7 @@ class CfgMagazineWells
     {
         OEC_APFSuppressor_Mags[] =
         {
-            "OEC_Magazine_APFSuppressor_200Rnd";
+            "OEC_Magazine_APFSuppressor_200Rnd"
         };
     };
 };

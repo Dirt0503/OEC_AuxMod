@@ -294,7 +294,7 @@ class CfgWeapons
                     explosionShielding = 0.8;
 				};
 			};
-        }
+        };
     };
 
     class OEC_Overwatch_Helmet_APF: OEC_Overwatch_Helmet_Assassin_1

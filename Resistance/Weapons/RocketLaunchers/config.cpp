@@ -10,7 +10,7 @@ class CfgPatches
 };
 
 class Mode_SemiAuto;
-
+class PointerSlot;
 class CfgWeapons
 {
     // RPG-7 for CIS
@@ -71,16 +71,6 @@ class CfgWeapons
             };
             sound[] = {"rhsafrf\addons\rhs_sounds\rpg\rpg_1",2.35,1,900};
 
-            /*class StandardSound: BaseSoundModeType
-            {
-                begin1[] = {"A3\Sounds_F\arsenal\weapons\Launchers\NLAW\nlaw",1.9952624,1,1800};
-                soundBegin[] = {"begin1",1};
-            };
-            class SilencedSound: BaseSoundModeType
-            {
-                begin1[] = {"A3\Sounds_F\arsenal\weapons\Launchers\NLAW\nlaw",1.9952624,1,1800};
-                soundBegin[] = {"begin1",1};
-            };*/
         };
         class single_optics1: single
         {
@@ -126,4 +116,5 @@ class CfgWeapons
 
         baseWeapon = "OEC_Weapons_RPG7";
 	};
+
 };

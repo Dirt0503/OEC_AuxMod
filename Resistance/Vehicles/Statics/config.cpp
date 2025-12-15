@@ -14,6 +14,7 @@ class CfgPatches
 			"OEC_KORD_tripod_base",
 			"OEC_KORD_tripod_CIS",
 			"OEC_KORD_high_base",
+			"OEC_KORD_high_CIS",
 			"OEC_ZU23_base",
 			"OEC_ZU23_CIS"
 		};

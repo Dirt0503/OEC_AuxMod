@@ -131,6 +131,29 @@ class CfgAmmo
         effectFly = "OEC_ParticleEffect_Gren";
     };
 
+	// GP-25 Flare
+	class OEC_Ammo_CMB20mm_RedFlare: F_40mm_Red
+	{
+		brightness = 25; // def 12
+		timeToLive = 60; // def 25
+		intensity = 1000000;
+		affectedByWind = 1;
+		flareSize = 20;
+		effectFlare = "RHS_FlareShell_Red";
+		aiAmmoUsageFlags = 0.5;
+	};
+	class F_40mm_Green;
+	class OEC_Ammo_CMB20mm_greenFlare: F_40mm_Green
+	{
+		brightness = 25; // def 12
+		timeToLive = 60; // def 25
+		intensity = 1000000;
+		affectedByWind = 1;
+		flareSize = 20;
+		effectFlare = "RHS_FlareShell_Green";
+		aiAmmoUsageFlags = 0.5;
+	};
+
 	// 7.62x51 Machinegun Round
 	class BulletBase;
 	class OEC_Ammo_762x51: BulletBase
@@ -177,10 +200,10 @@ class CfgAmmo
 	};
 
 	// Launcher Ammo
-	// Disposable
+	// Disposable for RPH
 	class RocketBase;
 	class R_PG32V_F: RocketBase{};
-	class OEC_Ammo_Rocket_Disposable: R_PG32V_F
+	class OEC_Ammo_Rocket_RPGdisposable: R_PG32V_F
 	{
 		AIAmmoUsageFlags = "128+256+512";
 		model = "\rhsafrf\addons\rhs_weapons\rpg26\rpg26_projectile";
@@ -236,7 +259,7 @@ class CfgAmmo
 	};
 
 	// RPG7 Rockets
-	class OEC_Ammo_Rocket_PG7V: OEC_Ammo_Rocket_Disposable
+	class OEC_Ammo_Rocket_PG7V: OEC_Ammo_Rocket_RPGdisposable
 	{
 		model = "\rhsafrf\addons\rhs_weapons\rpg7\projectiles\pg7v";
 		airfriction = 0.82;

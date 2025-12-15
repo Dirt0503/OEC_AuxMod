@@ -356,7 +356,7 @@ class CfgWeapons
 
     class OEC_Overwatch_Vest_APF: OEC_Overwatch_Vest_Soldier
     {
-        displayName = "[OEC] APF Vest"
+        displayName = "[OEC] APF Vest";
         model = "WBK_AdditionalGear\A_HalfLife_APF_vest.p3d";
 		hiddenSelections[] = {"Camo","CamoB"};
 		hiddenSelectionsTextures[] = 

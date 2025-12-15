@@ -204,26 +204,9 @@ class CfgMagazines
 		mass = 64;
 	};
 	
-	// disposable mag
+	// RPG-7 Mags
 	class CA_LauncherMagazine;
 	class FakeMagazine;
-	class OEC_Magazine_Disposable: FakeMagazine
-	{
-		allowedSlots[] = {701,901};
-		scope = 1;
-		scopeArsenal = 0;
-		author = "OEC Extension";
-		displayName = "[OEC] Disposable AT";
-		displayNameShort = "AT";
-		picture = "\rhsafrf\addons\rhs_weapons\icons\rpg26rocket_ca.paa";
-		model = "\A3\weapons_f\empty";
-		ammo = "OEC_Ammo_Rocket_Disposable";
-		type = "6 * 		256";
-		initSpeed = 115;
-		mass = 0;
-	};
-	
-	// RPG-7 Mags
 	class OEC_Magazine_PG7V: CA_LauncherMagazine
 	{
 		author = "OEC Extension";

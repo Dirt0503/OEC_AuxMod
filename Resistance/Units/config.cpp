@@ -16,10 +16,9 @@ class CfgPatches
     };
 };
 
-
 class CfgFactionClasses
 {
-    class OEC_Faction_CIS
+    class OEC_Faction_Class_CIS
     {
 		displayName = "[OEC] CISDF";
 		priority = -9;
@@ -55,6 +54,10 @@ class CfgEditorCategories
     class OEC_EdCat_CIS
     {
        displayName = "[OEC] CISDF";
+    };
+    class OEC_EdCat_Supply
+    {
+       displayName = "[OEC] Supply Boxes";
     };
 };
 
@@ -94,6 +97,10 @@ class CfgEditorSubCategories
     class OEC_EdSubCat_AA
     {
         displayName = "0. Anti-Air";
+    };
+    class OEC_EdSubCat_resup
+    {
+        displayName = "1. Combine Resupply";
     };
 
 };
