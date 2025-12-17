@@ -193,7 +193,7 @@ class CfgAmmo
 		//hit = 60;
 		//caliber = 3;
 		hit = 15;
-		caliber = 1.5;
+		caliber = 1.11;
 		indirectHit = 4.5;
 		indirectHitRange = 1.8;
 		visibleFire = 32;
@@ -245,8 +245,8 @@ class CfgMagazines
 		ammo = "OEC_ammo_23mm_AA";
 		scope = 2;
 		count = 100;
-		initSpeed = 990;
-		maxLeadSpeed = 416.667;
+		initSpeed = 860;
+		maxLeadSpeed = 650;
 		nameSound = "cannon";
 		tracersEvery = 1;
 		muzzleImpulseFactor[] = {1.0,4};
@@ -259,6 +259,7 @@ class CfgMagazines
 		ammo = "OEC_ammo_23mm_AA";
 		scope = 2;
 		count = 1250;
+		initSpeed = 970;
 	};
 };
 
@@ -974,6 +975,7 @@ class CfgVehicles
         editorSubCategory = "OEC_EdSubCat_AA";
 		crew = "OEC_Units_CIS_rifleman";
 		typicalCargo[] = {"OEC_Units_CIS_rifleman", "OEC_Units_CIS_JrSergeant"};
+		mass = 12000;
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret{};

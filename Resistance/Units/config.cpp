@@ -47,6 +47,10 @@ class CfgVehicleClasses
     {
         displayName = "APC";
     };
+    class OEC_Vehclass_Air
+    {
+        displayName = "Air";
+    };
 };
 
 class CfgEditorCategories
@@ -58,6 +62,10 @@ class CfgEditorCategories
     class OEC_EdCat_Supply
     {
        displayName = "[OEC] Supply Boxes";
+    };
+    class OEC_EdCat_Combine
+    {
+       displayName = "[OEC] Combine";
     };
 };
 
@@ -101,6 +109,10 @@ class CfgEditorSubCategories
     class OEC_EdSubCat_resup
     {
         displayName = "1. Combine Resupply";
+    };
+    class OEC_EdSubCat_Air
+    {
+        displayName = "7. Air";
     };
 
 };

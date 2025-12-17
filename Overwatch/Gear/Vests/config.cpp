@@ -167,7 +167,6 @@ class CfgWeapons
                 "HL_Combine\data\Urban\Urban_Shotgunner_pants.paa",
                 "HL_Combine\data\Urban\Urban_Shotgunner_upperArmor.paa"
             };
-            containerClass = "supply500";
 		};
         class XtdGearInfo
         {

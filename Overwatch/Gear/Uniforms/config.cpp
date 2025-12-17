@@ -97,6 +97,7 @@ class CfgWeapons
         class ItemInfo: ItemInfo
         {
             uniformClass = "OEC_Overwatch_Uniform_Medic_Vehicle";
+            containerClass = "Supply240";
         };
         class XtdGearInfo
         {
