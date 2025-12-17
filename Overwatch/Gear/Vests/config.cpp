@@ -65,7 +65,7 @@ class CfgWeapons
                 "HL_Combine\data\Materials\Armor.rvmat"
             };
 		    uniformModel = "\HL_Combine\data\Nemez_Vest.p3d";
-		    containerClass = "Supply100";
+		    containerClass = "Supply300";
 	        mass = 40;
 	    	vesttype = "Rebreather";
             class HitpointsProtectionInfo
@@ -101,14 +101,14 @@ class CfgWeapons
 	    		class Arms
     			{
 				    hitpointName = "HitArms";
-				    armor = 3;
+				    armor = 9;
 				    PassThrough = 0.08975;
                     explosionShielding = 0.8;
 		    	};
 	    		class Legs
     			{
 				    hitpointName = "Hitlegs";
-					armor = 3;
+					armor = 9;
 			    	PassThrough = 0.08975;
                     explosionShielding = 0.8;
 				};
@@ -402,14 +402,14 @@ class CfgWeapons
 	    		class Arms
     			{
 				    hitpointName = "HitArms";
-				    armor = 3;
+				    armor = 9;
 				    PassThrough = 0.08975;
                     explosionShielding = 0.8;
 		    	};
 	    		class Legs
     			{
 				    hitpointName = "Hitlegs";
-					armor = 3;
+					armor = 9;
 			    	PassThrough = 0.08975;
                     explosionShielding = 0.8;
 				};

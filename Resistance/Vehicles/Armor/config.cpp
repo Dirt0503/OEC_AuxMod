@@ -73,8 +73,8 @@ class CfgWeapons
 	{
 		type = 1;
 		ballisticsComputer = 4;
-		canLock = 2;
-		weaponLockSystem = 8;
+		canLock = 0;
+		weaponLockSystem = "1 + 2 + 8";
 		displayName = "2A14";
 		reloadMagazineSound[] = {"rhsafrf\addons\rhs_c_heavyweapons\sounds\rhs_2a14_reload",10.0,1,20};
 		scope = 1;
@@ -114,7 +114,7 @@ class CfgWeapons
 				effectName = "RHS_23mm_AmmoBeltLink";
 			};
 		};
-		magazines[] = {"OEC_Magazine_AZP23_AA_1250Rnds"};
+		magazines[] = {"OEC_Magazine_AZP23_AA_1250Rnd"};
 		magazineReloadTime = 9;
 		modes[] = {"manual","close","short","medium"};
 		class manual: OEC_Weapons_ZU23
@@ -146,7 +146,7 @@ class CfgWeapons
 			showToPlayer = 0;
 			soundBurst = 0;
 			burst = 40;
-			burstRangeMax = 50;
+			burstRangeMax = 60;
 			aiRateOfFire = 3;
 			aiRateOfFireDistance = 500;
 			aiRateOfFireDispersion = 2;
@@ -159,8 +159,8 @@ class CfgWeapons
 		};
 		class short: close
 		{
-			burst = 30;
-			burstRangeMax = 40;
+			burst = 40;
+			burstRangeMax = 60;
 			aiRateOfFire = 3;
 			aiRateOfFireDistance = 1200;
 			aiRateOfFireDispersion = 3;
@@ -173,8 +173,8 @@ class CfgWeapons
 		};
 		class medium: close
 		{
-			burst = 20;
-			burstRangeMax = 30;
+			burst = 40;
+			burstRangeMax = 60;
 			aiRateOfFire = 3;
 			aiRateOfFireDistance = 2500;
 			aiRateOfFireDispersion = 3;
@@ -416,18 +416,19 @@ class CfgVehicles
 		model = "\rhsafrf\addons\rhs_a2port_armor\rhs_zsu";
 		picture = "\rhsafrf\addons\rhs_a2port_armor\pictures\rhs_zsu23_pic_ca.paa";
 		Icon = "\rhsafrf\addons\rhs_a2port_armor\data\icomap_zsu_CA.paa";
-		crew = "OEC_NPC_CIS_Crew";
+		crew = "OEC_Units_CIS_Crew";
 		typicalCargo[] = {};
 		side = 0;
 		faction = "OEC_Faction_CIS";
 		tracksSpeed = 1;
 		irTarget = 1;
-		irTargetSize = 1;
+		irTargetSize = 1.2;
 		visualTarget = 1;
-		visualTargetSize = 1;
+		visualTargetSize = 1.2;
 		radarTarget = 1;
 		radarTargetSize = 1.2;
-		receiveRemoteTargets = 0;
+		reportRemoteTargets = 1;
+		receiveRemoteTargets = 1;
 		cost = 1500000;
 		damageResistance = 0.02;
 		crewVulnerable = 1;
@@ -448,13 +449,15 @@ class CfgVehicles
 		mapSize = 6.5;
 		commanderCanSee = 31;
 		gunnerCanSee = "1+16+4+8";
-		threat[] = {0.5,0.5,1};
+		threat[] = {1.0,0.6,1.0};
 		irScanGround = 0;
+		irScanRangeMix = 3000;
 		irScanRangeMax = 3000;
-		radarType = 4;
+		radarType = 2;
+		artilleryScanner = 0;
 		incomingMissileDetectionSystem = 0;
 		driverOpticsModel = "\rhsafrf\addons\rhs_optics\vehicles\rhs_tnpo170a";
-		armor = 200;
+		armor = 400;
 		armorStructural = 600;
 		class ViewOptics: ViewOptics
 		{
@@ -466,7 +469,7 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor = 0.45;
+				armor = 1;
 				material = -1;
 				name = "telo";
 				visual = "zbytek";
@@ -477,7 +480,7 @@ class CfgVehicles
 			};
 			class HitEngine
 			{
-				armor = 0.45;
+				armor = 0.8;
 				material = -1;
 				name = "motor";
 				visual = "zbytek";
@@ -853,7 +856,7 @@ class CfgVehicles
 				};
 				LODTurnedOut = 1100;
 				weapons[] = {"OEC_Weapons_ZU23_Shilka"};
-				magazines[] = {"OEC_Magazine_AZP23_AA_1250Rnds", "OEC_Magazine_AZP23_AA_1250Rnds"};
+				magazines[] = {"OEC_Magazine_AZP23_AA_1250Rnd"};
 				forceHideGunner = 0;
 				minElev = -4.5;
 				maxElev = 85;
@@ -1021,7 +1024,7 @@ class CfgVehicles
 						};
 						angleRangeHorizontal = 360;
 						angleRangeVertical = 100;
-						typeRecognitionDistance = 2500;
+						typeRecognitionDistance = 3000;
 						groundNoiseDistanceCoef = 0.05;
 						maxGroundNoiseDistance = 60;
 						minSpeedThreshold = 20;
@@ -1030,7 +1033,7 @@ class CfgVehicles
 						aimDown = -35;
 						minTrackableSpeed = 25;
 						maxTrackableSpeed = 555;
-						minTrackableATL = 50;
+						minTrackableATL = 30;
 					};
 				};
 			};
@@ -1039,7 +1042,7 @@ class CfgVehicles
 		{
 			class RHS_EventHandlers
 			{
-				init = "_this call rhs_fnc_bmp3_init";
+				init = "_this call rhs_fnc_bmp3_init;";
 				postInit = "_this call rhs_fnc_reapplyTextures";
 				getOut = "_this call rhs_fnc_hatchAbandon";
 				engine = "_this call rhs_fnc_engineCheckDamage;";
@@ -1106,6 +1109,7 @@ class CfgVehicles
 				weapon = "OEC_Weapons_PKM";
 			};
 		};
+		class Eventhandlers;
         
     };
 

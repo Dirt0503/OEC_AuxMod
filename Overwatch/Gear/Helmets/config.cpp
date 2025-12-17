@@ -79,7 +79,7 @@ class CfgWeapons
 				class Head
 				{
 					hitpointname = "HitHead";
-					armor = 6.5;
+					armor = 8;
 					visual = "injury_Head";
 					PassThrough = 0.08975;
                     explosionShielding = 0.8;
@@ -87,7 +87,7 @@ class CfgWeapons
 				class Face
 				{
 					hitpointName = "HitFace";
-					armor = 6.5;
+					armor = 8;
 					visual = "injury_Head";
 					PassThrough = 0.08975;
                     explosionShielding = 0.8;

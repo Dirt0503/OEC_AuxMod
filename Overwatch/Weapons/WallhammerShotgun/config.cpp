@@ -40,6 +40,7 @@ class CfgMagazines
         ammo = "OEC_Ammo_WallhammerShotgun";
         count = 8;
         initSpeed = 300;
+        mass = 17.5;
     };
     class OEC_Magazine_WallhammerShotgun_8Rnd_Shredder: OEC_Magazine_WallhammerShotgun_8Rnd
     {

@@ -19,7 +19,7 @@ class CfgPatches
             "OEC_Overwatch_Uniform_TL_Vehicle",
             "OEC_Overwatch_Uniform_Recon_Vehicle",
             "OEC_Overwatch_Uniform_Elite_Vehicle",
-           /*"OEC_Overwatch_Uniform_Assassin_1_Vehicle",
+           /* "OEC_Overwatch_Uniform_Assassin_1_Vehicle",
             "OEC_Overwatch_Uniform_Assassin_2_Vehicle",*/
             "OEC_Overwatch_Uniform_Wallhammer_Vehicle",
             "OEC_Overwatch_Uniform_APU_Vehicle"
@@ -33,8 +33,8 @@ class CfgPatches
             "OEC_Overwatch_Uniform_TL",
             "OEC_Overwatch_Uniform_Recon",
             "OEC_Overwatch_Uniform_Elite",
-            //"OEC_Overwatch_Uniform_Assassin_1",
-            //"OEC_Overwatch_Uniform_Assassin_2",
+            "OEC_Overwatch_Uniform_Assassin_1",
+            "OEC_Overwatch_Uniform_Assassin_2",
             "OEC_Overwatch_Uniform_Wallhammer",
             "OEC_Overwatch_Uniform_APU"
         };
@@ -60,7 +60,7 @@ class CfgWeapons
 		{
 			uniformModel = "-";
 			uniformClass = "OEC_Overwatch_Unit_Base";
-			containerClass = "Supply30";
+			containerClass = "Supply35";
 			mass = 20;
 			hiddenSelections[] = {""};
             scope = 1;
@@ -160,22 +160,6 @@ class CfgWeapons
             variant = "reconSL";
         };
     };
-   /* class OEC_Overwatch_Uniform_Assassin_1: OEC_Overwatch_Uniform_Soldier
-    {
-        displayName = "[OEC] Combine Assassin Uniform [1]";
-        class ItemInfo: ItemInfo
-        {
-            uniformClass = "OEC_Overwatch_Uniform_Assassin_1_Vehicle";
-        };
-    };
-    class OEC_Overwatch_Uniform_Assassin_2: OEC_Overwatch_Uniform_Soldier
-    {
-        displayName = "[OEC] Combine Assassin Uniform [2]";
-        class ItemInfo: ItemInfo
-        {
-            uniformClass = "OEC_Overwatch_Uniform_Assassin_2_Vehicle";
-        };
-    };*/
 
     class OEC_Overwatch_Uniform_Wallhammer: OEC_Overwatch_Uniform_Soldier
     {
@@ -199,6 +183,15 @@ class CfgWeapons
 
 class CfgVehicles
 {
+    class ContainerSupply;
+	class Supply35: ContainerSupply
+	{
+		maximumLoad = 35;
+	};
+    class Supply75: ContainerSupply
+	{
+		maximumLoad = 75;
+	};
     class OEC_Overwatch_Unit_Base;
 
     class OEC_Overwatch_Uniform_Soldier_Vehicle: OEC_Overwatch_Unit_Base
@@ -307,7 +300,7 @@ class CfgVehicles
         };
     };
 
-    /*class OEC_Overwatch_Uniform_Assassin_1_Vehicle: OEC_Overwatch_Uniform_Soldier_Vehicle
+    class OEC_Overwatch_Uniform_Assassin_1_Vehicle: OEC_Overwatch_Uniform_Soldier_Vehicle
     {
         uniformClass = "OEC_Overwatch_Uniform_Assassin_1";
         model = "\@Combain\CombainAssassin.p3d";
@@ -320,18 +313,15 @@ class CfgVehicles
     {
         uniformClass = "OEC_Overwatch_Uniform_Assassin_2";
         model = "@Combain\CombainAssassin2.p3d";
-    };*/
+    };
 
-    class OEC_Overwatch_Uniform_Wallhammer_Vehicle: OEC_Overwatch_Uniform_Soldier_Vehicle
+    class OEC_Overwatch_Uniform_Wallhammer_Vehicle: OEC_Overwatch_Uniform_Assassin_1_Vehicle
     {
         uniformClass = "OEC_Overwatch_Uniform_Wallhammer";
         model = "\WBK_FixingFactory\charger\CombainWallhamer.p3d";
-        hiddenSelections[] = {};
-		hiddenSelectionsTextures[] = {};
-        hiddenSelectionsMaterials[] = {};
     };
 
-    class OEC_Overwatch_Uniform_APF_Vehicle: OEC_Overwatch_Uniform_Wallhammer_Vehicle
+    class OEC_Overwatch_Uniform_APF_Vehicle: OEC_Overwatch_Uniform_Assassin_1_Vehicle
     {
         uniformClass = "OEC_Overwatch_Uniform_APF";
         model = "@Combain\CombainSuppressor.p3d";

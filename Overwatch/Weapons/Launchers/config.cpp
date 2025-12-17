@@ -73,8 +73,8 @@ class CfgMagazines
 	class OEC_Magazine_SIPL_HEAT55: CA_LauncherMagazine
 	{
 		author = "OEC Extension";
-		displayName = "[OEC] SIPL HEAT 55 Round";
-		displayNameShort = "SIPL - HEAT 55";
+		displayName = "[OEC] SIRR-1 Dual Purpose HE 55 Round";
+		displayNameShort = "SIRR - DPHE 55";
 		scope = 2;
 		scopeArsenal = 2;
 		descriptionShort = "Effective against: Vehicles, Armor.";
@@ -89,8 +89,8 @@ class CfgMagazines
 	class OEC_Magazine_SIPL_HE44: OEC_Magazine_SIPL_HEAT55
 	{
 		author = "OEC Extension";
-		displayName = "[OEC] SIPL HE 44 Round";
-		displayNameShort = "SIPL - HE";
+		displayName = "[OEC] SIRR-1 Thermobaric 44 Round";
+		displayNameShort = "SIRR - TB";
 		scope = 2;
 		scopeArsenal = 2;
 		descriptionShort = "Effective against: Infantry, Soft Vehicles, Buildings.";
@@ -104,8 +104,8 @@ class CfgMagazines
 	class OEC_Magazine_SIPL_HEAT75: OEC_Magazine_SIPL_HEAT55
 	{
 		author = "OEC Extension";
-		displayName = "[OEC] SIPL Tandem HEAT 75 Round";
-		displayNameShort = "SIPL - Tandem HEAT 75";
+		displayName = "[OEC] SIRR-1 Tandem HEAT 75 Round";
+		displayNameShort = "SIRR - THEAT 75";
 		scope = 2;
 		scopeArsenal = 2;
 		descriptionShort = "Effective against: Vehicles, Heavy Armor.";
@@ -353,7 +353,7 @@ class CfgWeapons
 			{
 				iconPosition[] = {0.15,0.5};
 				iconScale = 0.25;
-                compatibleItems[] = {"OEC_Pointer_Green"};
+                compatibleItems[] = {};
 			};
 		};
 		descriptionShort = "Standard Issue Recoilles Rifle";

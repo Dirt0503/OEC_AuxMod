@@ -1,3 +1,19 @@
+class CfgFunctions
+{
+    class OEC
+    {
+        tag = "OEC";
+        class functions
+        {
+            class cisZu23Assign
+            {
+                file = "\OECExtension\Scripts\OEC_cisZu23Assign.sqf";
+				description = "CIS Zu23 Emplacement Passenger Script";
+            };
+        };
+    };
+};
+
 class CfgPatches
 {
     class OEC_Extension_Resistance_Vehicles_Statics
@@ -174,7 +190,10 @@ class CfgAmmo
 	class B_35mm_AA;
 	class OEC_ammo_23mm_AA: B_35mm_AA
 	{
-		hit = 9;
+		//hit = 60;
+		//caliber = 3;
+		hit = 15;
+		caliber = 1.5;
 		indirectHit = 4.5;
 		indirectHitRange = 1.8;
 		visibleFire = 32;
@@ -182,15 +201,16 @@ class CfgAmmo
 		visibleFireTime = 4;
 		explosive = 0.6;
 		airLock = 1;
+		typicalSpeed = 960;
+		aiAmmoUsageFlags = "128 + 256";
 		cost = 15;
 		timeToLive = 14;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_green";
 		tracerScale = 1.85;
-		tracerStartTime = 0.1;
+		tracerStartTime = 0.005;
 		tracerEndTime = 5.5;
 		airFriction = -0.000471;
 		muzzleEffect = "";
-		caliber = 1.11;
 	};
 };
 
@@ -225,10 +245,11 @@ class CfgMagazines
 		ammo = "OEC_ammo_23mm_AA";
 		scope = 2;
 		count = 100;
-		initSpeed = 980;
-		maxLeadSpeed = 650;
+		initSpeed = 1440;
+		maxLeadSpeed = 416.667;
 		nameSound = "cannon";
 		tracersEvery = 1;
+		muzzleImpulseFactor[] = {1.0,4};
 	};
 
 	class OEC_Magazine_AZP23_AA_1250Rnd: OEC_Magazine_AZP23_AA_100Rnd
@@ -372,11 +393,10 @@ class CfgWeapons
 	class CannonCore;
 	class OEC_Weapons_ZU23: CannonCore
 	{
-		type = 1;
+		displayName = "2A14";
 		ballisticsComputer = 2;
 		canLock = 0;
-		weaponLockSystem = 1;
-		displayName = "2A14";
+		weaponLockSystem = 0;
 		reloadMagazineSound[] = {"rhsafrf\addons\rhs_c_heavyweapons\sounds\rhs_2a14_reload",10.0,1,20};
 		scope = 1;
 		nameSound = "cannon";
@@ -708,6 +728,12 @@ class CfgVehicles
 		cargoAction[] = {"vehicle_coshooter_1"};
 		cargoIsCoDriver[] = {1,1};
 		initCargoAngleY = 180;
+		irTarget = 0;
+		irTargetSize = 1;
+		visualTarget = 1;
+		visualTargetSize = 1;
+		radarTarget = 1;
+		radarTargetSize = 1;
 		memoryPointsGetInCargo = "pos_cargo_dir";
 		memoryPointsGetInCargoDir = "pos_cargo";
 		memoryPointsGetInDriver = "pos_driver_dir";
@@ -757,7 +783,7 @@ class CfgVehicles
 				initElev = 0;
 				maxHorizontalRotSpeed = 0.55;
 				maxVerticalRotSpeed = 0.35;
-				weapons[] = {"OEC_weap_zu23"};
+				weapons[] = {"OEC_Weapons_ZU23"};
 				canUseScanner = 0;
 				magazines[] = {"OEC_Magazine_AZP23_AA_100Rnd","OEC_Magazine_AZP23_AA_100Rnd","OEC_Magazine_AZP23_AA_100Rnd"};
 				gunnerAction = "RHS_Zu23_Gunner";
