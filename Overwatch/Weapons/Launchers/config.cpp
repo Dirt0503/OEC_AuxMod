@@ -83,7 +83,14 @@ class CfgMagazines
 		initSpeed = 350;
 		ammo = "OEC_Ammo_Rocket_SIPL_HEAT55";
 		type = "2*		256";
-		mass = 30;
+		mass = 25;
+		allowedSlots[] = 
+		{
+			701, // Vest
+			801, // Uniform
+			901  // Backpack
+		};
+
 	};
 
 	class OEC_Magazine_SIPL_HE44: OEC_Magazine_SIPL_HEAT55
@@ -98,7 +105,7 @@ class CfgMagazines
 		picture = "\a3\Weapons_F_Tank\Launchers\MRAWS\Data\UI\icon_rocket_MRAWS_HE_F_ca.paa";
 		initSpeed = 350;
 		ammo = "OEC_Ammo_Rocket_SIPL_HE";
-		mass = 20;
+		mass = 15;
 	};
 
 	class OEC_Magazine_SIPL_HEAT75: OEC_Magazine_SIPL_HEAT55
@@ -113,7 +120,7 @@ class CfgMagazines
 		picture = "\a3\Weapons_F_Tank\Launchers\MRAWS\Data\UI\icon_rocket_MRAWS_HEAT_F_ca.paa";
 		initSpeed = 350;
 		ammo = "OEC_Ammo_Rocket_SIPL_HEAT75";
-		mass = 40;
+		mass = 35;
 	};
 };
 

@@ -388,9 +388,9 @@ class CfgAmmo
 
 	class Ammo_Penetrator_SIPL_HEAT75: ammo_Penetrator_Base
 	{
-		caliber = 33.3333;
+		caliber = 40;
 		warheadName = "Tandem HEAT (75)";
-		hit = 495;
+		hit = 500;
 	};
 
 	class OEC_Ammo_Rocket_SIPL_HE: OEC_Ammo_Rocket_SIPL_HEAT75
@@ -442,7 +442,7 @@ class CfgAmmo
 
 	class ammo_Penetrator_SIPL_HEAT55: ammo_Penetrator_Base
 	{
-		caliber = 26.6667;
-		hit = 450;
+		caliber = 20;
+		hit = 300;
 	};
 };

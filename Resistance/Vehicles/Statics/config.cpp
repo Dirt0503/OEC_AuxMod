@@ -201,7 +201,7 @@ class CfgAmmo
 		visibleFireTime = 4;
 		explosive = 0.6;
 		airLock = 1;
-		typicalSpeed = 960;
+		typicalSpeed = 980;
 		aiAmmoUsageFlags = "128 + 256";
 		cost = 15;
 		timeToLive = 14;
@@ -229,7 +229,7 @@ class CfgMagazines
 		scope = 2;
 		count = 100;
 		ammo = "OEC_ammo_127x108mm";
-		initSpeed = 840;
+		initSpeed = 990;
 		tracersEvery = 1;
 		nameSound = "mgun";
 		weight = "0.13*50";
@@ -245,7 +245,7 @@ class CfgMagazines
 		ammo = "OEC_ammo_23mm_AA";
 		scope = 2;
 		count = 100;
-		initSpeed = 1440;
+		initSpeed = 990;
 		maxLeadSpeed = 416.667;
 		nameSound = "cannon";
 		tracersEvery = 1;
