@@ -311,9 +311,9 @@ class CfgAmmo
 
 	class OEC_Ammo_Penetrator_sipl0Disposable: ammo_Penetrator_Base
 	{
-		caliber = 18;
+		caliber = 12.5;
 		warheadName = "HEAT";
-		hit = 370;
+		hit = 120;
 	};
 
 	// SIPL-1 ammo

@@ -107,7 +107,7 @@ class CfgEditorCategories
     };
     class OEC_EdCat_Supply
     {
-       displayName = "[OEC] Supply Boxes";
+       displayName = "[OEC] Supply Objects";
     };
     class OEC_EdCat_Combine
     {
@@ -155,6 +155,10 @@ class CfgEditorSubCategories
     class OEC_EdSubCat_resup
     {
         displayName = "1. Combine Resupply";
+    };
+     class OEC_EdSubCat_Pods
+    {
+        displayName = "2. Airwatch Pods";
     };
     class OEC_EdSubCat_Air
     {

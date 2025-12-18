@@ -64,6 +64,12 @@ class CfgFunctions
                 file = "\OECExtension\Scripts\OEC_cisZu23Assign.sqf";
 				description = "CIS Zu23 Emplacement Passenger Script";
             };
+
+            class cisTaruPod
+            {
+                file = "\OECExtension\Scripts\OEC_cmbTaruPod.sqf";
+				description = "OEC Taru Pod Script";
+            };
         };
     };
 };
