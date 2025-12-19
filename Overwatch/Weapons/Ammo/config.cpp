@@ -248,9 +248,9 @@ class CfgAmmo
 		effectsMissileInit = "RocketBackEffectsRPG";
 		model = "\CUP\Weapons\CUP_Weapons_M136\CUP_AT4_rocket.p3d";
 		hit = 85;
-		indirectHit = 10;
+		indirectHit = 25;
 		indirectHitRange = 2;
-		warheadName = "AT";
+		warheadName = "HEAT";
 		submunitionAmmo = "OEC_Ammo_Penetrator_sipl0Disposable";
 		submunitionDirectionType = "SubmunitionModelDirection";
 		submunitionInitSpeed = 1000;
@@ -313,14 +313,14 @@ class CfgAmmo
 	{
 		caliber = 12.5;
 		warheadName = "HEAT";
-		hit = 120;
+		hit = 200;
 	};
 
 	// SIPL-1 ammo
 	class OEC_Ammo_Rocket_SIPL_HEAT75: RocketBase
 	{
 		EffectFly = "ArtilleryTrails";
-		warheadName = "THEAT";
+		warheadName = "TandemHEAT";
 		submunitionAmmo = "Ammo_Penetrator_SIPL_HEAT75";
 		submunitionDirectionType = "SubmunitionModelDirection";
 		submunitionInitSpeed = 1000;
@@ -331,7 +331,7 @@ class CfgAmmo
 		hit = 150;
 		indirectHit = 14;
 		indirectHitRange = 3;
-		explosive = 0.8;
+		explosive = 0.85;
 		cost = 100;
 		airFriction = 0.05;
 		sideAirFriction = 0;
@@ -389,13 +389,13 @@ class CfgAmmo
 	class Ammo_Penetrator_SIPL_HEAT75: ammo_Penetrator_Base
 	{
 		caliber = 40;
-		warheadName = "Tandem HEAT (75)";
+		warheadName = "TandemHEAT";
 		hit = 500;
 	};
 
 	class OEC_Ammo_Rocket_SIPL_HE: OEC_Ammo_Rocket_SIPL_HEAT75
 	{
-		warheadName = "TB (44)";
+		warheadName = "HE";
 		submunitionAmmo = "";
 		submunitionDirectionType = "";
 		submunitionInitSpeed = 0;
@@ -424,7 +424,7 @@ class CfgAmmo
 
 	class OEC_Ammo_Rocket_SIPL_HEAT55: OEC_Ammo_Rocket_SIPL_HEAT75
 	{
-		warheadName = "DPHE (55)";
+		warheadName = "HEAT";
 		submunitionAmmo = "ammo_Penetrator_SIPL_HEAT55";
 		submunitionDirectionType = "SubmunitionModelDirection";
 		submunitionInitSpeed = 1000;

@@ -8,14 +8,20 @@ class CfgPatches
             "OEC_Extension_Resistance_Vehicles",
             "rhs_c_a2port_armor",
             "rhs_c_btr",
-            "rhs_btr80"
+            "rhs_btr80",
+			"rhs_c_bmp3",
+		//	"rhs_bmp3",
+			"rhs_c_heavyweapons",
+			"OEC_Extension_Resistance_Weapons_Heavy"
         };
         units[] = 
 		{
             "OEC_zsutank_base",
             "OEC_zsu234_AA",
             "OEC_BTR80_Base",
-            "OEC_BTR80_CIS"
+            "OEC_BTR80_CIS",
+			"OEC_Vehicles_bmp3m_base",
+			"OEC_Vehicles_bmp3m"
 		};
         weapons[] = 
         {
@@ -1077,6 +1083,11 @@ class CfgVehicles
         {
             class recoil_source;
         };
+		class HitPoints
+		{
+			class HitBody;
+			class HitEngine;
+		};
     };
     class OEC_BTR80_Base: rhs_btr80_msv
     {
@@ -1084,31 +1095,115 @@ class CfgVehicles
 		{
 			class MainTurret: MainTurret
 			{
-                weapons[] = {"OEC_Weapons_DSHKM","OEC_Weapons_PKM"};
-				magazines[] = {"OEC_Magazine_127x100_100Rnd","OEC_Magazine_127x100_100Rnd","OEC_Magazine_127x100_100Rnd","OEC_Magazine_127x100_100Rnd","OEC_Magazine_127x100_100Rnd","OEC_Magazine_762x51_150Rnd","OEC_Magazine_762x51_150Rnd","OEC_Magazine_762x51_150Rnd","OEC_Magazine_762x51_150Rnd","OEC_Magazine_762x51_150Rnd","OEC_Magazine_762x51_150Rnd","OEC_Magazine_762x51_150Rnd","OEC_Magazine_762x51_150Rnd"};
+                weapons[] = {"OEC_Weapons_DSHKM","OEC_Weapons_vicPKM", "rhs_weap_902a"};
+				magazines[] = {"OEC_Magazine_127x100_50Rnd", "OEC_Magazine_127x100_50Rnd", "OEC_Magazine_127x100_50Rnd", "OEC_Magazine_127x100_50Rnd", "OEC_Magazine_762x51_100Rnd", "OEC_Magazine_762x51_100Rnd", "OEC_Magazine_762x51_100Rnd", "OEC_Magazine_762x51_100Rnd", "rhs_mag_3d17_6"};
             };
         };
-        class AnimationSources: AnimationSources
+		armor = 250;
+		class HitPoints: HitPoints
+		{
+			class HitEngine
+			{
+				armor = 1;
+				material = -1;
+				name = "engine";
+				visual = "zbytek";
+				passThrough = 0.2;
+				radius = 0.2;
+				class DestructionEffects
+				{
+					ammoExplosionEffect = "";
+					class RHS_Engine_Smoke
+					{
+						simulation = "particles";
+						type = "SmallWreckSmoke";
+						position = "engine_smoke1";
+						intensity = 0.5;
+						interval = 1;
+						lifeTime = 60;
+					};
+					class RHS_Engine_Fire: RHS_Engine_Smoke
+					{
+						type = "SmallFireFPlace";
+					};
+					class RHS_Engine_Sparks: RHS_Engine_Smoke
+					{
+						type = "RHS_FireSparks";
+					};
+					class RHS_Engine_Sounds: RHS_Engine_Smoke
+					{
+						simulation = "sound";
+						type = "Fire";
+					};
+					class RHS_Engine_Smoke_small1: RHS_Engine_Smoke
+					{
+						type = "WeaponWreckSmoke";
+						position = "engine_smoke2";
+					};
+					class RHS_Engine_Smoke_small2: RHS_Engine_Smoke_small1
+					{
+						position = "engine_smoke3";
+					};
+					class RHS_Engine_Smoke_small3: RHS_Engine_Smoke
+					{
+						position = "engine_smoke4";
+					};
+					class RHS_Engine_Fire2: RHS_Engine_Smoke_small3
+					{
+						type = "SmallFireFPlace";
+					};
+					class RHS_Engine_Sparks2: RHS_Engine_Smoke_small3
+					{
+						type = "RHS_FireSparks";
+					};
+				};
+			};
+			class HitFuel
+			{
+				armor = 4;
+				material = -1;
+				name = "palivo";
+				passThrough = 0;
+				radius = 0.15;
+			};
+			class HitHull
+			{
+				armor = 0.8;
+				material = -1;
+				name = "telo";
+				visual = "zbytek";
+				passThrough = 1;
+				minimalHit = 0.44;
+				explosionShielding = 1;
+				radius = 0.25;
+			};
+		};
+		class AnimationSources: AnimationSources
 		{
 			class recoil_source
 			{
 				source = "reload";
 				weapon = "OEC_Weapons_DSHKM";
 			};
-			class muzzle_hide_hmg: recoil_source
-            {
-                weapon = "OEC_Weapons_DSHKM";
-            };
+			class muzzle_hide_hmg: recoil_source{};
 			class muzzle_rot_hmg: recoil_source
 			{
 				source = "ammorandom";
 			};
-			class muzzle_rot_mg: recoil_source
+			class muzzle_rot_mg: muzzle_rot_hmg
 			{
-                source = "reload";
-				weapon = "OEC_Weapons_PKM";
+				weapon = "OEC_Weapons_vicPKM";
+			};
+			class smokecap_revolving_source
+			{
+				source = "revolving";
+				weapon = "rhs_weap_902a";
 			};
 		};
+		class TransportMagazines{};
+		class TransportWeapons{};
+		class TransportItems{};
+		class TransportBackpacks{};
 		class Eventhandlers;
         
     };
@@ -1127,5 +1222,227 @@ class CfgVehicles
         editorSubCategory = "OEC_EdSubCat_AFV";
 		vehicleClass = "OEC_Vehclass_APC";
 		crew = "OEC_Units_CIS_Crew";
+	};
+
+	// BMP-3 IFV
+	class rhs_bmp3tank_base: Tank_F
+	{
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret{};
+		};
+		class textureSources;
+	};
+	class rhs_bmp3m_msv: rhs_bmp3tank_base
+	{
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class Turrets
+				{
+					class CommanderOptics;
+				};
+			};
+		};
+		class textureSources: textureSources
+		{
+			class standard;
+		};
+		class Sounds;
+	};
+	class OEC_Vehicles_bmp3m_base: rhs_bmp3m_msv
+	{
+		scope = 0;
+		faction = "OEC_Faction_CIS";
+		factionClass = "OEC_Faction_Class_CIS";
+        editorCategory = "OEC_EdCat_CIS";
+        editorSubCategory = "OEC_EdSubCat_AFV";
+		vehicleClass = "OEC_Vehclass_APC";
+		crew = "OEC_Units_CIS_Crew";
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				weapons[] = {"OEC_Weapons_2a72","OEC_Weapons_vicPKM","rhs_weap_902a"};
+				magazines[] = {"OEC_Magazine_2a72_20Rnd","OEC_Magazine_2a72_20Rnd","OEC_Magazine_2a72_20Rnd", "OEC_Magazine_762x51_100Rnd", "OEC_Magazine_762x51_100Rnd", "OEC_Magazine_762x51_100Rnd", "OEC_Magazine_762x51_100Rnd","rhs_mag_3d17_6"};
+			//	turretInfoType = "RHS_RscWeaponESSA_FCS";
+				discreteDistance[] = {};
+				discreteDistanceInitIndex = 0;
+				class Turrets: Turrets
+				{
+					class CommanderOptics: CommanderOptics
+					{
+						gunnerType = "OEC_Units_CIS_Crew";
+					};
+				};
+			};
+		};
+		class AnimationSources
+		{
+			/*class muzzle_rot_coax
+			{
+				source = "ammorandom";
+				weapon = "OEC_Weapons_vicPKM";
+			};
+			class recoil_source2
+			{
+				source = "reload";
+				weapon = "OEC_Weapons_2a72";
+			};
+			class muzzle_hide_hmg: recoil_source2{};
+			class muzzle_rot_hmg: recoil_source2
+			{
+				source = "ammorandom";
+			};
+			class smokecap_revolving_source
+			{
+				source = "revolving";
+				weapon = "rhs_weap_902a";
+			};
+			class muzzle_rot_coax2: muzzle_rot_hmg
+			{
+				weapon = "rhs_weap_pkt_bmd_bow1";
+			};
+			class muzzle_rot_coax3: muzzle_rot_hmg
+			{
+				weapon = "rhs_weap_pkt_bmd_bow2";
+			};
+			class hatchC
+			{
+				source = "door";
+				animPeriod = 2.1;
+			};*/
+			class muzzle_rot_coax
+			{
+				source = "ammorandom";
+				weapon = "rhs_weap_pkt_bmd_coax";
+			};
+			class recoil_source
+			{
+				source = "reload";
+				weapon = "rhs_weap_2a70";
+			};
+			class muzzle_hide_cannon: recoil_source{};
+			class muzzle_rot_cannon: recoil_source
+			{
+				source = "ammorandom";
+			};
+			class recoil_source2
+			{
+				source = "reload";
+				weapon = "rhs_weap_2a72";
+			};
+			class muzzle_hide_hmg: recoil_source2{};
+			class muzzle_rot_hmg: recoil_source2
+			{
+				source = "ammorandom";
+			};
+			class smokecap_revolving_source
+			{
+				source = "revolving";
+				weapon = "rhs_weap_902a";
+			};
+			class muzzle_rot_coax2: muzzle_rot_hmg
+			{
+				weapon = "rhs_weap_pkt_bmd_bow1";
+			};
+			class muzzle_rot_coax3: muzzle_rot_hmg
+			{
+				weapon = "rhs_weap_pkt_bmd_bow2";
+			};
+			class autoloader
+			{
+				source = "user";
+				animPeriod = 1.25;
+				initPhase = 0;
+			};
+			class hatchC
+			{
+				source = "door";
+				animPeriod = 2.1;
+			};
+			class HatchG: hatchC{};
+			class HatchD: hatchC{};
+			class HatchLA: hatchC{};
+			class HatchRA: hatchC{};
+			class elev
+			{
+				source = "user";
+				animperiod = 0.0003;
+			};
+			class elev_bank
+			{
+				source = "user";
+				animperiod = 0.0003;
+			};
+			class lead
+			{
+				source = "user";
+				animperiod = 0.0016;
+			};
+			class offset
+			{
+				source = "user";
+				animperiod = 0.0002;
+			};
+		};
+		class textureSources: textureSources
+		{
+			class standard: standard
+			{
+				author = "$STR_RHS_AUTHOR_FULL";
+				textures[] = {"rhsafrf\addons\rhs_bmp3\data\rhs_bmp3_01_3m_co.paa","rhsafrf\addons\rhs_bmp3\data\rhs_bmp3_02_co.paa","rhsafrf\addons\rhs_bmp3\data\rhs_bmp3_03_3m_co.paa","rhsafrf\addons\rhs_bmp3\data\rhs_bmp3_04_co.paa"};
+			};
+		};
+		class TransportMagazines{};
+		class TransportWeapons{};
+		class TransportItems{};
+		class TransportBackpacks{};
+		class Sounds: sounds {};
+	};
+	class OEC_Vehicles_bmp3m: OEC_Vehicles_bmp3m_base
+	{
+		editorPreview = "rhsafrf\addons\rhs_editorPreviews\data\rhs_bmp3mera_msv.paa";
+		model = "\rhsafrf\addons\rhs_bmp3\bmp3m_era";
+		scope = 2;
+		displayName = "BMP-3 IFV";
+		armor = 250;
+		armorStructural = 500;
+        scopeCurator = 2;
+		side = 0;
+		author = "OEC Extension";
+		faction = "OEC_Faction_CIS";
+		factionClass = "OEC_Faction_Class_CIS";
+        editorCategory = "OEC_EdCat_CIS";
+        editorSubCategory = "OEC_EdSubCat_AFV";
+		vehicleClass = "OEC_Vehclass_APC";
+		crew = "OEC_Units_CIS_Crew";
+		class HitPoints: HitPoints
+		{
+			class Armor_Composite_50
+			{
+				armor = 999;
+				material = -1;
+				name = "Armor_CE_50_Hit";
+				armorComponent = "Armor_CE_50";
+				simulation = "RHS_Composite_50";
+				passThrough = 0;
+				minimalHit = 1;
+				explosionShielding = 0.0;
+				radius = 0.001;
+				visual = "-";
+			};
+		};
+		hiddenSelections[] = {"camo1","camo2","camo3","camo4","camo5","n1","n2","n3","i1","f1","f2","f3","f4","f5","f6","f7","f8","f9"};
+		hiddenSelectionsTextures[] = {"rhsafrf\addons\rhs_bmp3\data\rhs_bmp3_01_3mera_co.paa","rhsafrf\addons\rhs_bmp3\data\rhs_bmp3_02_3mera_co.paa","rhsafrf\addons\rhs_bmp3\data\rhs_bmp3_03_3m_co.paa","rhsafrf\addons\rhs_bmp3\data\rhs_bmp3_04_co.paa","rhsafrf\addons\rhs_bmp3\data\3m_era_co.paa"};
+		class textureSources: textureSources
+		{
+			class standard: standard
+			{
+				author = "$STR_RHS_AUTHOR_FULL";
+				textures[] = {"rhsafrf\addons\rhs_bmp3\data\rhs_bmp3_01_3mera_co.paa","rhsafrf\addons\rhs_bmp3\data\rhs_bmp3_02_3mera_co.paa","rhsafrf\addons\rhs_bmp3\data\rhs_bmp3_03_3m_co.paa","rhsafrf\addons\rhs_bmp3\data\rhs_bmp3_04_co.paa","rhsafrf\addons\rhs_bmp3\data\3m_era_co.paa"};
+			};
+		};
 	};
 }; 

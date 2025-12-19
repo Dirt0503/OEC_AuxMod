@@ -62,7 +62,7 @@ class CfgFunctions
             class cisZu23Assign
             {
                 file = "\OECExtension\Scripts\OEC_cisZu23Assign.sqf";
-				description = "CIS Zu23 Emplacement Passenger Script";
+				description = "CIS Zu23 Emplacement Script";
             };
 
             class cisTaruPod
