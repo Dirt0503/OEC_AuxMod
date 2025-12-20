@@ -20,6 +20,7 @@ class CfgPatches
             "OEC_Overwatch_Uniform_Recon_Vehicle",
             "OEC_Overwatch_Uniform_Elite_Vehicle",
             "OEC_Overwatch_Uniform_Wallhammer_Vehicle",
+            "OEC_Overwatch_Uniform_Airwatch_Vehicle",
             "OEC_Overwatch_Uniform_APU_Vehicle"
         };
         weapons[] = 
@@ -32,6 +33,7 @@ class CfgPatches
             "OEC_Overwatch_Uniform_Recon",
             "OEC_Overwatch_Uniform_Elite",
             "OEC_Overwatch_Uniform_Wallhammer",
+            "OEC_Overwatch_Uniform_Airwatch",
             "OEC_Overwatch_Uniform_APU"
         };
     };
@@ -166,6 +168,16 @@ class CfgWeapons
             uniformClass = "OEC_Overwatch_Uniform_Wallhammer_Vehicle";
         };
         class XtdGearInfo{};
+    };
+    class OEC_Overwatch_Uniform_Airwatch: OEC_Overwatch_Uniform_Soldier
+    {
+        displayName = "[OEC] Airwatch Uniform";
+        class ItemInfo: ItemInfo
+        {
+            uniformClass = "OEC_Overwatch_Uniform_Airwatch_Vehicle";
+        };
+        class XtdGearInfo
+        {};
     };
     class OEC_Overwatch_Uniform_APF: OEC_Overwatch_Uniform_Soldier
     {
@@ -305,6 +317,11 @@ class CfgVehicles
     {
         uniformClass = "OEC_Overwatch_Uniform_Wallhammer";
         model = "\WBK_FixingFactory\charger\CombainWallhamer.p3d";
+    };
+
+    class OEC_Overwatch_Uniform_Airwatch_Vehicle: OEC_Overwatch_Uniform_Wallhammer_Vehicle
+    {
+        uniformClass = "OEC_Overwatch_Uniform_Airwatch";
     };
 
     class OEC_Overwatch_Uniform_APF_Vehicle: OEC_Overwatch_Uniform_Soldier_Vehicle

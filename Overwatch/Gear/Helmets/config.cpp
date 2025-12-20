@@ -15,6 +15,7 @@ class CfgPatches
         weapons[] = 
         {
             "OEC_Overwatch_Helmet_Soldier",
+            "OEC_Overwatch_Helmet_Airwatch",
             "OEC_Overwatch_Helmet_AT",
             "OEC_Overwatch_Helmet_Medic",
             "OEC_Overwatch_Helmet_Recon",
@@ -97,6 +98,39 @@ class CfgWeapons
             model = "OEC_ACEX_Helmet_CMB_Soldier";
             variant = "soldier";
         };
+    };
+
+    class OEC_Overwatch_Helmet_Airwatch: OEC_Overwatch_Helmet_Soldier
+    {
+        displayName = "[OEC] Airwatch Helmet";
+        hiddenSelectionsTextures[] = 
+        {
+            "HL_Combine\data\BorderPatrol\BorderPatrol_helmet.paa",
+            "HL_Combine\data\BorderPatrol\BorderPatrol_torso.paa",
+            "HL_Combine\data\BorderPatrol\BorderPatrol_lens.paa"
+        };
+		hiddenSelectionsMaterials[] = 
+        {
+            "HL_Combine\data\Materials\Armor.rvmat",
+            "HL_Combine\data\Materials\Armor.rvmat",
+            "HL_Combine\data\Materials\Lens\Orange.rvmat"
+        };
+        class ItemInfo: ItemInfo
+        {
+            hiddenSelectionsTextures[] = 
+            {
+                "HL_Combine\data\BorderPatrol\BorderPatrol_helmet.paa",
+                "HL_Combine\data\BorderPatrol\BorderPatrol_torso.paa",
+                "HL_Combine\data\BorderPatrol\BorderPatrol_lens.paa"
+            };
+			hiddenSelectionsMaterials[] = 
+            {
+                "HL_Combine\data\Materials\Armor.rvmat",
+                "HL_Combine\data\Materials\Armor.rvmat",
+                "HL_Combine\data\Materials\Lens\Orange.rvmat"
+            };
+        };
+        class XtdGearInfo{};
     };
 
     class OEC_Overwatch_Helmet_AT: OEC_Overwatch_Helmet_Soldier

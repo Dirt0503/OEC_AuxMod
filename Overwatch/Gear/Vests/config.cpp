@@ -22,7 +22,8 @@ class CfgPatches
             "OEC_Overwatch_Vest_Recon_TL",
             "OEC_Overwatch_Vest_Wallhamer_Heavy",
             "OEC_Overwatch_Vest_Wallhammer_Light",
-            "OEC_Overwatch_Vest_APF"
+            "OEC_Overwatch_Vest_APF",
+            "OEC_Overwatch_Vest_Airwatch"
         };
     };
 };
@@ -466,6 +467,19 @@ class CfgWeapons
                     explosionShielding = 0.8;
 				};
 			};
+		};
+        class XtdGearInfo{};
+    };
+
+    class OEC_Overwatch_Vest_Airwatch: OEC_Overwatch_Vest_Soldier
+    {
+        displayName = "[OEC] Airwatch Vest";
+        picture = "\hl_res_characters\ui\icon_v_res_ca.paa";
+		model = "\hl_res_characters\models\v_res.p3d";
+        class ItemInfo: ItemInfo
+		{
+			uniformModel = "\hl_res_characters\models\v_res.p3d";
+			hiddenSelections[] = {};
 		};
         class XtdGearInfo{};
     };

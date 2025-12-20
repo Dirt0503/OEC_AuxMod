@@ -6,10 +6,17 @@ class CfgPatches
         requiredAddons[] =
         {
         };
-        units[] = {};
-        weapons[] = 
+        units[] = 
         {
+            "OEC_Overwatch_Backpack_Base",
+            "OEC_Overwatch_Backpack_Invisible",
+            "OEC_Overwatch_Backpack_OxygenTank_Dark",
+            "OEC_Overwatch_Backpack_OxygenTank_White",
+            "OEC_Overwatch_Backpack_OxygenTank_Airwatch",
+            "OEC_Overwatch_Backpack_Dark",
+            "OEC_Overwatch_Backpack_White"
         };
+        weapons[] = {};
     };
 };
 
@@ -55,6 +62,14 @@ class CfgVehicles
             model = "OEC_ACEX_Backpack_CMB_Oxygen";
             variant = "light";
         };
+    };
+    class OEC_Overwatch_Backpack_OxygenTank_Airwatch: OEC_Overwatch_Backpack_OxygenTank_Dark
+    {
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"\WBK_Combines\grunt\data\body_dark.paa"};
+        model = "\WBK_Combines\grunt\backpack_civ.p3d";
+        displayName = "[OEC] Oxygen Tank - Airwatch";
+        class XtdGearInfo{};
     };
     
     class OEC_Overwatch_Backpack_Dark: OEC_Overwatch_Backpack_Base
