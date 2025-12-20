@@ -15,6 +15,7 @@ class CfgPatches
         weapons[] = 
         {
             "OEC_Overwatch_Helmet_Soldier",
+            "OEC_Overwatch_Helmet_Airwatch",
             "OEC_Overwatch_Helmet_AT",
             "OEC_Overwatch_Helmet_Medic",
             "OEC_Overwatch_Helmet_Recon",
@@ -77,7 +78,7 @@ class CfgWeapons
 				class Head
 				{
 					hitpointname = "HitHead";
-					armor = 8;
+					armor = 6;
 					visual = "injury_Head";
 					PassThrough = 0.08975;
                     explosionShielding = 0.8;
@@ -85,7 +86,7 @@ class CfgWeapons
 				class Face
 				{
 					hitpointName = "HitFace";
-					armor = 8;
+					armor = 6;
 					visual = "injury_Head";
 					PassThrough = 0.08975;
                     explosionShielding = 0.8;
@@ -97,6 +98,39 @@ class CfgWeapons
             model = "OEC_ACEX_Helmet_CMB_Soldier";
             variant = "soldier";
         };
+    };
+
+    class OEC_Overwatch_Helmet_Airwatch: OEC_Overwatch_Helmet_Soldier
+    {
+        displayName = "[OEC] Airwatch Helmet";
+        hiddenSelectionsTextures[] = 
+        {
+            "HL_Combine\data\BorderPatrol\BorderPatrol_helmet.paa",
+            "HL_Combine\data\BorderPatrol\BorderPatrol_torso.paa",
+            "HL_Combine\data\BorderPatrol\BorderPatrol_lens.paa"
+        };
+		hiddenSelectionsMaterials[] = 
+        {
+            "HL_Combine\data\Materials\Armor.rvmat",
+            "HL_Combine\data\Materials\Armor.rvmat",
+            "HL_Combine\data\Materials\Lens\Orange.rvmat"
+        };
+        class ItemInfo: ItemInfo
+        {
+            hiddenSelectionsTextures[] = 
+            {
+                "HL_Combine\data\BorderPatrol\BorderPatrol_helmet.paa",
+                "HL_Combine\data\BorderPatrol\BorderPatrol_torso.paa",
+                "HL_Combine\data\BorderPatrol\BorderPatrol_lens.paa"
+            };
+			hiddenSelectionsMaterials[] = 
+            {
+                "HL_Combine\data\Materials\Armor.rvmat",
+                "HL_Combine\data\Materials\Armor.rvmat",
+                "HL_Combine\data\Materials\Lens\Orange.rvmat"
+            };
+        };
+        class XtdGearInfo{};
     };
 
     class OEC_Overwatch_Helmet_AT: OEC_Overwatch_Helmet_Soldier
@@ -246,7 +280,7 @@ class CfgWeapons
                 class Head
 				{
 					hitpointname = "HitHead";
-					armor = 8;
+					armor = 6;
 					visual = "injury_Head";
 					PassThrough = 0.08975;
                     explosionShielding = 0.8;
@@ -254,7 +288,7 @@ class CfgWeapons
 				class Face
 				{
 					hitpointName = "HitFace";
-					armor = 8;
+					armor = 6;
 					visual = "injury_Head";
 					PassThrough = 0.08975;
                     explosionShielding = 0.8;
@@ -286,7 +320,7 @@ class CfgWeapons
 				class Head
 				{
 					hitpointname = "HitHead";
-					armor = 10;
+					armor = 9;
 					visual = "injury_Head";
 					PassThrough = 0.08975;
                     explosionShielding = 0.8;
@@ -294,11 +328,12 @@ class CfgWeapons
 				class Face
 				{
 					hitpointName = "HitFace";
-					armor = 10;
+					armor = 9;
 					visual = "injury_Head";
 					PassThrough = 0.08975;
                     explosionShielding = 0.8;
 				};
+                
 			};
         };
         class XtdGearInfo{};
