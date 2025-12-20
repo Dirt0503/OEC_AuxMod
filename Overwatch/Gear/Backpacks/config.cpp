@@ -69,6 +69,12 @@ class CfgVehicles
         hiddenSelectionsTextures[] = {"\WBK_Combines\grunt\data\body_dark.paa"};
         model = "\WBK_Combines\grunt\backpack_civ.p3d";
         displayName = "[OEC] Oxygen Tank - Airwatch";
+        tf_dialog = "anprc155_radio_dialog";
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_hasLRradio = 1;
+		tf_range = 20000;
+		tf_subtype = "digital_lr";
         class XtdGearInfo{};
     };
     
