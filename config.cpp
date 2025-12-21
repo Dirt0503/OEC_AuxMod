@@ -93,6 +93,14 @@ class CfgVehicleClasses
     {
         displayName = "APC";
     };
+    class OEC_Vehclass_IFV
+    {
+        displayName = "APC";
+    };
+    class OEC_Vehclass_Tank
+    {
+        displayName = "APC";
+    };
     class OEC_Vehclass_Air
     {
         displayName = "Air";
