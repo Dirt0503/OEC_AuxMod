@@ -1776,7 +1776,7 @@ class CfgVehicles
 		{
 			class RHS_EventHandlers
 			{
-				init = "_this call rhs_fnc_bmp3_init; _this call oec_fnc_cisBMP3Assign";
+				init = "_this call rhs_fnc_bmp3_init;";
 				postInit = "_this call rhs_fnc_reapplyTextures";
 				fired = "_this call RHS_fnc_bmp3_autoloader;";
 				hitpart = "_this call rhs_fnc_hitSpall";

@@ -682,11 +682,11 @@ class CfgWeapons
 			flashSize = 0.1;
 			aiBurstTerminable = 1;
 			minRange = 1;
-			minRangeProbab = 1;
+			minRangeProbab = 0.4;
 			midRange = 2;
-			midRangeProbab = 1;
+			midRangeProbab = 0.5;
 			maxRange = 3;
-			maxRangeProbab = 1;
+			maxRangeProbab = 0.1;
 			dispersion = 0.0009375;
 			textureType = "burst";
 			sounds[] = {"StandardSound"};
@@ -704,25 +704,25 @@ class CfgWeapons
 			aiRateOfFire = 0.5;
 			aiRateOfFireDistance = 150;
 			minRange = 0;
-			minRangeProbab = 1;
+			minRangeProbab = 0.4;
 			midRange = 75;
-			midRangeProbab = 1;
+			midRangeProbab = 0.5;
 			maxRange = 150;
-			maxRangeProbab = 1;
+			maxRangeProbab = 0.1;
 		};
 		class med: close
 		{
 			burst = 6;
 			burstRangeMax = 10;
 			aiRateOfFire = 0.5;
-			aiRateOfFireDistance = 200;
+			aiRateOfFireDistance = 300;
 			aiRateOfFireDispersion = 2;
 			minRange = 100;
-			minRangeProbab = 1;
+			minRangeProbab = 0.4;
 			midRange = 200;
-			midRangeProbab = 1;
+			midRangeProbab = 0.5;
 			maxRange = 300;
-			maxRangeProbab = 1;
+			maxRangeProbab = 0.1;
 		};
 		class far: close
 		{
@@ -732,11 +732,11 @@ class CfgWeapons
 			aiRateOfFireDistance = 550;
 			aiRateOfFireDispersion = 3;
 			minRange = 250;
-			minRangeProbab = 1;
+			minRangeProbab = 0.4;
 			midRange = 400;
-			midRangeProbab = 1;
+			midRangeProbab = 0.5;
 			maxRange = 550;
-			maxRangeProbab = 1;
+			maxRangeProbab = 0.1;
 		};
 	};
 	// 2A46 T80 125mm Cannon
