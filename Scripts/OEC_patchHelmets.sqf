@@ -7,6 +7,7 @@
         "OEC_Overwatch_Helmet_AT",
         "OEC_Overwatch_Helmet_Medic",
         "OEC_Overwatch_Helmet_Recon",
+        "OEC_Overwatch_Helmet_Airwatch",
         "OEC_Overwatch_Helmet_TL",
         "OEC_Overwatch_Helmet_Elite",
         "OEC_Overwatch_Helmet_Recon_TL",

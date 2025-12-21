@@ -76,6 +76,37 @@ class CfgFunctions
                 file = "\OECExtension\Scripts\OEC_cmbTaruPod.sqf";
 				description = "OEC Taru Pod Script";
             };
+
+            class cmbSoldier
+            {
+                file = "\OECExtension\Scripts\CombineTypeAssignments\OEC_cmbSoldier.sqf";
+				description = "Vocelines & Abilities Script";
+            };
+            class cmbRanger
+            {
+                file = "\OECExtension\Scripts\CombineTypeAssignments\OEC_cmbRanger.sqf";
+				description = "Vocelines & Abilities Script";
+            };
+            class cmbOrdinal
+            {
+                file = "\OECExtension\Scripts\CombineTypeAssignments\OEC_cmbOrdinal.sqf";
+				description = "Vocelines & Abilities Script";
+            };
+            class cmbCharger
+            {
+                file = "\OECExtension\Scripts\CombineTypeAssignments\OEC_cmbCharger.sqf";
+				description = "Vocelines & Abilities Script";
+            };
+            class cmbGrunt
+            {
+                file = "\OECExtension\Scripts\CombineTypeAssignments\OEC_cmbGrunt.sqf";
+				description = "Vocelines & Abilities Script";
+            };
+            class cmbAPF
+            {
+                file = "\OECExtension\Scripts\CombineTypeAssignments\OEC_cmbAPF.sqf";
+				description = "Vocelines & Abilities Script";
+            };
         };
     };
 };
