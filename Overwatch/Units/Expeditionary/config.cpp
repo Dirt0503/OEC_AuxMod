@@ -294,10 +294,11 @@ class CfgVehicles
 			soldier[] = {{"run",{"\WBK_HalfLifeSounds\Sounds\heavy_stomp_run_3.wav",1,1,30}},{"run",{"\WBK_HalfLifeSounds\Sounds\heavy_stomp_run_2.wav",1,1,30}},{"run",{"\WBK_HalfLifeSounds\Sounds\heavy_stomp_run_1.wav",1,1,30}},{"walk",{"\WBK_HalfLifeSounds\Sounds\heavy_stomp_walk_3.wav",1,1,20}},{"walk",{"\WBK_HalfLifeSounds\Sounds\heavy_stomp_walk_2.wav",1,1,20}},{"walk",{"\WBK_HalfLifeSounds\Sounds\heavy_stomp_walk_1.wav",1,1,20}},{"sprint",{"\WBK_HalfLifeSounds\Sounds\heavy_stomp_1.wav",1.2,1,40}},{"sprint",{"\WBK_HalfLifeSounds\Sounds\heavy_stomp_2.wav",1.2,1,40}},{"sprint",{"\WBK_HalfLifeSounds\Sounds\heavy_stomp_3.wav",1.2,1,40}},{"tactical",{"\WBK_HalfLifeSounds\Sounds\heavy_stomp_run_3.wav",1,1,30}},{"tactical",{"\WBK_HalfLifeSounds\Sounds\heavy_stomp_run_2.wav",1,1,30}},{"tactical",{"\WBK_HalfLifeSounds\Sounds\heavy_stomp_run_1.wav",1,1,30}},{"\WBK_HalfLifeSounds\Sounds\heavy_stomp_run_3.wav",1,1,20},{"\WBK_HalfLifeSounds\Sounds\heavy_stomp_run_1.wav",1,1,20},{"\WBK_HalfLifeSounds\Sounds\heavy_stomp_run_2.wav",1,1,20}};
 		};
     };
-    class OEC_Overwatch_Unit_Airwatch: OEC_Overwatch_Unit_Wallhammer
+    class OEC_Overwatch_Unit_Airwatch: OEC_Overwatch_Unit_Soldier
     {
         displayName = "[OEC] Pilot";
         uniformClass = "OEC_Overwatch_Uniform_Airwatch";
+        model = "\WBK_FixingFactory\charger\CombainWallhamer.p3d";
         backpack = "OEC_Overwatch_Backpack_OxygenTank_Airwatch";
         linkedItems[] = {"OEC_Overwatch_Helmet_Airwatch", "OEC_Overwatch_Vest_Airwatch","ItemMap", "TFAR_anprc152", "ItemCompass", "ItemWatch"};
         respawnLinkedItems[] = {"OEC_Overwatch_Helmet_Airwatch", "OEC_Overwatch_Vest_Airwatch", "ItemMap", "TFAR_anprc152", "ItemCompass", "ItemWatch"};
