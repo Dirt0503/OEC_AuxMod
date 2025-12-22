@@ -83,7 +83,7 @@ class CfgVehicles
     {
         scope = 2;
         scopeCurator = 2;
-        displayName = "[OEC] Soldier";
+        displayName = "Soldier";
         uniformClass = "OEC_Overwatch_Uniform_Soldier";
         editorCategory = "OEC_EdCat_Combine";
         editorSubCategory = "OEC_EdSubCat_Infantry";
@@ -105,7 +105,7 @@ class CfgVehicles
 
     class OEC_Overwatch_Unit_AT: OEC_Overwatch_Unit_Soldier
     {
-        displayName = "[OEC] AT Soldier";
+        displayName = "AT Soldier";
         uniformClass = "OEC_Overwatch_Uniform_AT";
         linkedItems[] = {"OEC_Overwatch_Helmet_AT", "OEC_Overwatch_Vest_AT","ItemMap", "TFAR_anprc152", "ItemCompass", "ItemWatch"};
         respawnLinkedItems[] = {"OEC_Overwatch_Helmet_AT", "OEC_Overwatch_Vest_AT", "ItemMap", "TFAR_anprc152", "ItemCompass", "ItemWatch"};
@@ -132,7 +132,7 @@ class CfgVehicles
     };
     class OEC_Overwatch_Unit_Medic: OEC_Overwatch_Unit_Soldier
     {
-        displayName = "[OEC] Medic";
+        displayName = "Medic";
         uniformClass = "OEC_Overwatch_Uniform_Medic";
         linkedItems[] = {"OEC_Overwatch_Helmet_Medic", "OEC_Overwatch_Vest_Medic","ItemMap", "TFAR_anprc152", "ItemCompass", "ItemWatch"};
         respawnLinkedItems[] = {"OEC_Overwatch_Helmet_Medic", "OEC_Overwatch_Vest_Medic", "ItemMap", "TFAR_anprc152", "ItemCompass", "ItemWatch"};
@@ -159,7 +159,7 @@ class CfgVehicles
     };
     class OEC_Overwatch_Unit_Recon: OEC_Overwatch_Unit_Soldier
     {
-        displayName = "[OEC] Ranger";
+        displayName = "Ranger";
         uniformClass = "OEC_Overwatch_Uniform_Recon";
         linkedItems[] = {"OEC_Overwatch_Helmet_Recon", "OEC_Overwatch_Vest_Recon","ItemMap", "TFAR_anprc152", "ItemCompass", "ItemWatch"};
         respawnLinkedItems[] = {"OEC_Overwatch_Helmet_Recon", "OEC_Overwatch_Vest_Recon", "ItemMap", "TFAR_anprc152", "ItemCompass", "ItemWatch"};
@@ -182,7 +182,7 @@ class CfgVehicles
     };
     class OEC_Overwatch_Unit_TL: OEC_Overwatch_Unit_Soldier
     {
-        displayName = "[OEC] Team Leader";
+        displayName = "Team Leader";
         uniformClass = "OEC_Overwatch_Uniform_TL";
         linkedItems[] = {"OEC_Overwatch_Helmet_TL", "OEC_Overwatch_Vest_TL","ItemMap", "TFAR_anprc152", "ItemCompass", "ItemWatch"};
         respawnLinkedItems[] = {"OEC_Overwatch_Helmet_TL", "OEC_Overwatch_Vest_TL", "ItemMap", "TFAR_anprc152", "ItemCompass", "ItemWatch"};
@@ -205,7 +205,7 @@ class CfgVehicles
     };
     class OEC_Overwatch_Unit_Elite: OEC_Overwatch_Unit_Soldier
     {
-        displayName = "[OEC] Squad Leader";
+        displayName = "Squad Leader";
         uniformClass = "OEC_Overwatch_Uniform_Elite";
         model = "\HL_Combine\data\Nemez_Combine_Elite.p3d";
         linkedItems[] = {"OEC_Overwatch_Helmet_Elite", "OEC_Overwatch_Vest_Elite","ItemMap", "TFAR_anprc152", "ItemCompass", "ItemWatch"};
@@ -244,7 +244,7 @@ class CfgVehicles
     };
     class OEC_Overwatch_Unit_Recon_TL: OEC_Overwatch_Unit_Elite
     {
-        displayName = "[OEC] Recon Team Lead";
+        displayName = "Recon Team Leader";
         uniformClass = "OEC_Overwatch_Uniform_Recon_TL";
         linkedItems[] = {"OEC_Overwatch_Helmet_Recon_TL", "OEC_Overwatch_Vest_Recon_TL","ItemMap", "TFAR_anprc152", "ItemCompass", "ItemWatch"};
         respawnLinkedItems[] = {"OEC_Overwatch_Helmet_Recon_TL", "OEC_Overwatch_Vest_Recon_TL", "ItemMap", "TFAR_anprc152", "ItemCompass", "ItemWatch"};
@@ -266,7 +266,7 @@ class CfgVehicles
     };
     class OEC_Overwatch_Unit_Wallhammer: OEC_Overwatch_Unit_Soldier
     {
-        displayName = "[OEC] Wallhammer";
+        displayName = "Wallhammer";
         uniformClass = "OEC_Overwatch_Uniform_Wallhammer";
         model = "\WBK_FixingFactory\charger\CombainWallhamer.p3d";
         hiddenSelections[] = {};
@@ -296,7 +296,7 @@ class CfgVehicles
     };
     class OEC_Overwatch_Unit_Airwatch: OEC_Overwatch_Unit_Soldier
     {
-        displayName = "[OEC] Pilot";
+        displayName = "Pilot";
         uniformClass = "OEC_Overwatch_Uniform_Airwatch";
         model = "\WBK_FixingFactory\charger\CombainWallhamer.p3d";
         backpack = "OEC_Overwatch_Backpack_OxygenTank_Airwatch";
@@ -316,7 +316,7 @@ class CfgVehicles
     };
     class OEC_Overwatch_Unit_APF: OEC_Overwatch_Unit_Soldier
     {
-        displayName = "[OEC] APF";
+        displayName = "APF";
         uniformClass = "OEC_Overwatch_Uniform_APF";
         model = "@Combain\CombainSuppressor.p3d";
         linkedItems[] = {"OEC_Overwatch_Helmet_APF", "OEC_Overwatch_Vest_APF","ItemMap", "TFAR_anprc152", "ItemCompass", "ItemWatch"};
