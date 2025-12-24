@@ -151,8 +151,8 @@ class CfgWeapons
 					};
 				};
 			};
-			dispersion = 0;
-			reloadTime = 0.1;
+			dispersion = 0.000093;
+			reloadTime = 2;
 			recoil = "HL_CMB_arifle_AR2_Recoil_Fire";
 			recoilProne = "HL_CMB_arifle_AR2_Recoil_Fire";
 			minRange = 20;

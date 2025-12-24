@@ -112,6 +112,25 @@ class CfgAmmo
 		coefGravity = 0.01;
 	};
 
+	// R-1 Silenced Pulse Rifle Ammo
+	class OEC_Ammo_R1: OEC_Ammo_AR2
+	{
+		hit = 13;
+		typicalSpeed = 770;
+		timeToLive = 0.666666667;
+		caliber = 1.5;
+		model = "\hl_cmb_weapons\ar2\Data\bullettracer\tracer_blue";
+		dangerRadiusBulletClose = -1;
+		dangerRadiusHit = -1;
+		suppressionRadiusBulletClose = -1;
+		suppressionRadiusHit = -1;
+		visibleFire = 0.1;
+		visibleFireTime = 6;
+		audibleFire = 0.1;
+		audibleFireTime = 6;
+		coefGravity = 0.01;
+	};
+
 	// R-2X Sniper Ammo
 	class OEC_Ammo_cmbSrifle_normal: OEC_Ammo_AR2
 	{
