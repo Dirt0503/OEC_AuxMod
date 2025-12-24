@@ -199,6 +199,16 @@ class CfgVehicles
 				magazine = "OEC_Magazine_APFSuppressor_100Rnd";
 				count = 60;
 			};
+			class XX_OEC_Magazine_cmbSrifle
+			{
+				magazine = "OEC_Magazine_cmbSrifle";
+				count = 120;
+			};
+			class XX_OEC_Magazine_cmbSrifle_AP
+			{
+				magazine = "OEC_Magazine_cmbSrifle_AP";
+				count = 30;
+			};
 		};
 		class TransportWeapons
 		{

@@ -26,9 +26,21 @@ class CfgMagazines
 		initSpeed = 1000;
 		picture = "\rhsusf\addons\rhsusf_weapons2\icons\rhs_icon_m781_ca.paa";
 		tracersEvery = 1;
-		mass = 3;
+		mass = 2.5;
 	};
-};
+	class OEC_Magazine_cmbSrifle_AP: OEC_Magazine_cmbSrifle
+	{
+		scope = 2;
+		ammo = "OEC_Ammo_cmbSrifle_AP";
+		author = "OEC Extension";
+		displayName = "[OEC] R-2X Cell - Piercer";
+		count = 1;
+		initSpeed = 1000;
+		picture = "\rhsusf\addons\rhsusf_weapons2\icons\rhs_icon_m443_ca.paa";
+		tracersEvery = 1;
+		mass = 5;
+	};
+}; 
 
 class Mode_SemiAuto;
 class CfgWeapons
@@ -47,25 +59,6 @@ class CfgWeapons
 			class UnderBarrelSlot{};
 			class PointerSlot{};
 		};
-		/*opticsID = 1;
-        opticsDisplayName = "WFOV";
-        useModelOptics = 1;
-        opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1"};
-        opticsZoomMin = 0.01;
-        opticsZoomMax = 0.042;
-        opticsZoomInit = 0.042;
-        discreteDistance[] = {300};
-        discreteDistanceInitIndex = 2;
-        distanceZoomMin = 300;
-        distanceZoomMax = 300;
-        discretefov[] = {0.042,0.01};
-        discreteInitIndex = 0;
-        memoryPointCamera = "opticView";
-        modelOptics[] = {"\A3\Weapons_F\acc\reticle_lrps_F","\A3\Weapons_F\acc\reticle_lrps_z_F"};
-        visionMode[] = {"Normal"};
-        opticsFlare = 1;
-        opticsDisablePeripherialVision = 1;
-        cameraDir = "";*/
 
         modelOptics[] = {"\A3\Weapons_F\acc\reticle_lrps_F","\A3\Weapons_F\acc\reticle_lrps_z_F"};
         class OpticsModes
@@ -93,8 +86,6 @@ class CfgWeapons
             };
         };
 
-        //weaponInfoType = "RscWeaponRangeZeroingFOV";
-
         author = "OEC Extension";
         displayName = "[OEC] R-2X Pulse Sniper Rifle";
 		scopeArsenal = 2;
@@ -106,8 +97,9 @@ class CfgWeapons
 		reloadMagazineSound[] = {"WBK_Combines\weapons\sniper_reload.wav",2,1,30};
 		model = "WBK_Combines\weapons\assasin_sniper.p3d";
 		handAnim[] = {"OFP2_ManSkeleton","WBK_Combines\weapons\assasin_sniper_idle.rtm"};
-		magazines[] = {"OEC_Magazine_cmbSrifle"};
+		magazines[] = {"OEC_Magazine_cmbSrifle", "OEC_Magazine_cmbSrifle_AP", "OEC_Magazine_cmbSrifle_HE"};
         magazineWell[] = {};
+
 		class Single: Mode_SemiAuto
 		{
 			sounds[] = {"StandardSound"};
