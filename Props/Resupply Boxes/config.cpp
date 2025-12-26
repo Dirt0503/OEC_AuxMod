@@ -224,6 +224,16 @@ class CfgVehicles
 				magazine = "OEC_Magazine_M320_Stun";
 				count = 10;
 			};
+			class XX_OEC_Magazine_SPAS12_8Rnd
+			{
+				magazine = "OEC_Magazine_SPAS12_8Rnd";
+				count = 40;
+			};
+			class XX_OEC_Magazine_SPAS12_8Rnd_Slug
+			{
+				magazine = "OEC_Magazine_SPAS12_8Rnd_Slug";
+				count = 40;
+			};
 		};
 		class TransportWeapons
 		{

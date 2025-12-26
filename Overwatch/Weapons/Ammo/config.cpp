@@ -63,6 +63,60 @@ class CfgAmmo
         hit = 6;
     };
 
+	// SPAS-12 Shells
+	class BulletBase;
+	class OEC_Ammo_SPAS12_Buckshot: SubmunitionBullet
+    {
+		model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
+		tracerStartTime = 0.005;
+		tracerEndTime = 3;
+		tracerScale = 1.2;
+        triggerTime = 0.002;
+		cartridge = "FxCartridge_slug";
+        submunitionConeAngle = 1.5;
+        submunitionCount = 8;
+        submunitionAmmo = "OEC_Ammo_SPAS12_Buckshot_Pellets";
+        submunitionInitialOffset[] = {0, 0, -0.2};
+        triggerOnImpact = 1;
+        deleteParentWhenTriggered = 1;
+        timeToLive = 1;
+        hit = 1;
+        cost = 1;
+		airFriction = -0.008;
+    };
+
+    class OEC_Ammo_SPAS12_Slug: BulletBase
+    {
+		model = "\A3\Weapons_f\Data\bullettracer\tracer_green";
+		tracerStartTime = 0.005;
+		tracerEndTime = 3;
+		tracerScale = 1.2;
+        hit = 35;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		cartridge = "FxCartridge_slug";
+		cost = 5;
+		typicalSpeed = 600;
+		airFriction = -0.006;
+		caliber = 3;
+		deflecting = 30;
+    };
+
+    class OEC_Ammo_SPAS12_Buckshot_Pellets: B_65x39_Caseless
+    {
+        model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
+		tracerStartTime = 0.005;
+		tracerEndTime = 3;
+		tracerScale = 1.2;
+        airFriction = -0.0115;
+        hit = 8;
+        caliber = 3.5;
+        timeToLive = 0.6;
+		typicalSpeed = 590;
+    };
+
+
+	// APF Suppressor ammo
     class OEC_Ammo_APFSuppressor: B_65x39_Caseless
     {
         effectFly = "OEC_ParticleEffect_AlienPulse_Orange";
@@ -88,7 +142,6 @@ class CfgAmmo
     };
 
 	// AR-2 Ammo
-	class BulletBase;
 	class OEC_Ammo_AR2: BulletBase
 	{
 		airLock = 0;
@@ -192,7 +245,7 @@ class CfgAmmo
 		indirectHit = 0;
 		indirectHitRange = 0;
 		cartridge = "FxCartridge_9mm";
-		cost = 100;
+		cost = 1;
 		typicalSpeed = 380;
 		airFriction = -0.0075;
 		caliber = 1.3;
