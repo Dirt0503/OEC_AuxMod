@@ -217,12 +217,12 @@ class CfgVehicles
 			class XX_OEC_Magazine_M320_Smoke
 			{
 				magazine = "OEC_Magazine_M320_Smoke";
-				count = 30;
+				count = 20;
 			};
 			class XX_OEC_Magazine_M320_Stun
 			{
 				magazine = "OEC_Magazine_M320_Stun";
-				count = 40;
+				count = 10;
 			};
 		};
 		class TransportWeapons

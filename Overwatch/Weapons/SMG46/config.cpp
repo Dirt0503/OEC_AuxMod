@@ -34,7 +34,7 @@ class CfgMagazines
 	class OEC_Magazine_OICW_HE_6rnd;
     class OEC_Magazine_SMG46_HE_2Rnd: OEC_Magazine_OICW_HE_6rnd
 	{
-		displayName = "[OEC] MP7 HE 2Rnd Mag";
+		displayName = "[OEC] MP7 HE 2Rnd GL Mag";
 		initspeed = 80;
 		count = 2;
 		mass = 8.25;
@@ -44,7 +44,7 @@ class CfgMagazines
 	class OEC_Magazine_OICW_Smoke_6rnd;
 	class OEC_Magazine_SMG46_Smoke_2Rnd: OEC_Magazine_OICW_Smoke_6rnd
 	{
-		displayName = "[OEC] MP7 Instant Smoke 2Rnd Mag";
+		displayName = "[OEC] MP7 Instant Smoke 2Rnd GL Mag";
 		initspeed = 80;
 		count = 2;
 		mass = 4.125;
@@ -54,7 +54,7 @@ class CfgMagazines
 	class OEC_Magazine_OICW_Stun_3rnd;
 	class OEC_Magazine_SMG46_Stun_1Rnd: OEC_Magazine_OICW_Stun_3rnd
 	{
-		displayName = "[OEC] MP7 Stun 1Rnd Mag";
+		displayName = "[OEC] MP7 Stun 1Rnd GL Mag";
 		initspeed = 80;
 		count = 1;
 		mass = 8.25;
@@ -66,7 +66,7 @@ class CfgMagazines
 	{
 		scope = 1;
 		scopeArsenal = 1;
-		displayName = "[OEC] MP7 Flare (Red) 2Rnd Mag";
+		displayName = "[OEC] MP7 Flare (Red) 2Rnd GL Mag";
 		initspeed = 80;
 		count = 2;
 		mass = 1.65;
@@ -75,7 +75,7 @@ class CfgMagazines
     class OEC_Magazine_OICW_green_6rnd;
 	class OEC_Magazine_SMG46_green_2Rnd: OEC_Magazine_OICW_green_6rnd
 	{
-		displayName = "[OEC] MP7 Flare (Green) 2Rnd Mag";
+		displayName = "[OEC] MP7 Flare (Green) 2Rnd GL Mag";
 		initspeed = 80;
 		count = 2;
 		mass = 1.65;

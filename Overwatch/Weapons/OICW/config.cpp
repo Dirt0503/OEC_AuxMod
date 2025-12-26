@@ -57,7 +57,7 @@ class CfgMagazines
 	class OEC_Magazine_OICW_HE_6rnd: 1Rnd_HE_Grenade_shell
 	{
 		author = "OEC Extension";
-		displayName = "[OEC] XM29 HE 6Rnd Mag";
+		displayName = "[OEC] XM29 HE 6Rnd GL Mag";
 		displaynameshort = "HE Grenade";
 		descriptionShort = "Standard 20mm Combine High-Explosive Grenade";
 		picture = "\cup\weapons\cup_weapons_xm29\data\ui\m_xm29_he_ca.paa";
@@ -75,7 +75,7 @@ class CfgMagazines
 	class OEC_Magazine_OICW_Smoke_6rnd: OEC_Magazine_OICW_HE_6rnd
 	{
 		author = "OEC Extension";
-		displayName = "[OEC] XM29 Instant Smoke 6Rnd Mag";
+		displayName = "[OEC] XM29 Instant Smoke 6Rnd GL Mag";
 		displaynameshort = "Instant Smoke";
 		descriptionShort = "Standard 20mm Combine Instant Smoke Grenade";
 		ammo = "OEC_Ammo_CMB20mm_smoke";
@@ -91,7 +91,7 @@ class CfgMagazines
 	class OEC_Magazine_OICW_Stun_3rnd: OEC_Magazine_OICW_HE_6rnd
 	{
 		author = "OEC Extension";
-		displayName = "[OEC] XM29 Stun Grenade 3Rnd Mag";
+		displayName = "[OEC] XM29 Stun Grenade 3Rnd GL Mag";
 		descriptionShort = "Standard 20mm Combine Stun Grenade";
 		displaynameshort = "Stun Grenade";
 		picture = "\cup\weapons\cup_weapons_xm29\data\ui\m_xm29_he_ca.paa";
@@ -108,7 +108,7 @@ class CfgMagazines
 		scope = 1;
 		scopeArsenal = 1;
 		author = "OEC Extension";
-		displayName = "[OEC] XM29 Flare (Red) 6Rnd Mag";
+		displayName = "[OEC] XM29 Flare (Red) 6Rnd GL Mag";
 		displaynameshort = "Red Flare";
 		descriptionShort = "Standard 20mm Combine Red Flare";
 		ammo = "OEC_Ammo_CMB20mm_red";
@@ -119,7 +119,7 @@ class CfgMagazines
 	class OEC_Magazine_OICW_green_6rnd: OEC_Magazine_OICW_HE_6rnd
 	{
 		author = "OEC Extension";
-		displayName = "[OEC] XM29 Flare (Green) 6Rnd Mag";
+		displayName = "[OEC] XM29 Flare (Green) 6Rnd GL Mag";
 		displaynameshort = "Green Flare";
 		descriptionShort = "Standard 20mm Combine Green Flare";
 		ammo = "OEC_Ammo_CMB20mm_green";
