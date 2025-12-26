@@ -63,6 +63,60 @@ class CfgAmmo
         hit = 6;
     };
 
+	// SPAS-12 Shells
+	class BulletBase;
+	class OEC_Ammo_SPAS12_Buckshot: SubmunitionBullet
+    {
+		model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
+		tracerStartTime = 0.005;
+		tracerEndTime = 10;
+		tracerScale = 1;
+        triggerTime = 0.002;
+		cartridge = "FxCartridge_slug";
+        submunitionConeAngle = 1.1;
+        submunitionCount = 8;
+        submunitionAmmo = "OEC_Ammo_SPAS12_Buckshot_Pellets";
+        submunitionInitialOffset[] = {0, 0, -0.2};
+        triggerOnImpact = 1;
+        deleteParentWhenTriggered = 1;
+        timeToLive = 1;
+        hit = 1;
+        cost = 1;
+		airFriction = -0.013;
+    };
+
+    class OEC_Ammo_SPAS12_Slug: BulletBase
+    {
+		model = "\A3\Weapons_f\Data\bullettracer\tracer_green";
+		tracerStartTime = 0.005;
+		tracerEndTime = 10;
+		tracerScale = 1.5;
+        hit = 35;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		cartridge = "FxCartridge_slug";
+		cost = 5;
+		typicalSpeed = 600;
+		airFriction = -0.006;
+		caliber = 3;
+		deflecting = 30;
+    };
+
+    class OEC_Ammo_SPAS12_Buckshot_Pellets: B_65x39_Caseless
+    {
+        model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
+		tracerStartTime = 0.005;
+		tracerEndTime = 10;
+		tracerScale = 1;
+        airFriction = -0.013;
+        hit = 6.5;
+        caliber = 3;
+        timeToLive = 0.6;
+		typicalSpeed = 590;
+    };
+
+
+	// APF Suppressor ammo
     class OEC_Ammo_APFSuppressor: B_65x39_Caseless
     {
         effectFly = "OEC_ParticleEffect_AlienPulse_Orange";
@@ -88,7 +142,6 @@ class CfgAmmo
     };
 
 	// AR-2 Ammo
-	class BulletBase;
 	class OEC_Ammo_AR2: BulletBase
 	{
 		airLock = 0;
@@ -192,7 +245,7 @@ class CfgAmmo
 		indirectHit = 0;
 		indirectHitRange = 0;
 		cartridge = "FxCartridge_9mm";
-		cost = 100;
+		cost = 1;
 		typicalSpeed = 380;
 		airFriction = -0.0075;
 		caliber = 1.3;
@@ -256,6 +309,29 @@ class CfgAmmo
 		effectFly = "OEC_ParticleEffect_Gren";
 	};
 
+	//cmb colored smoke
+	class SmokeShellYellow;
+	class SmokeShellGreen;
+	class SmokeShellRed;
+	class OEC_Ammo_CMB40mm_smokeRed: SmokeShellRed
+	{
+		model = "\A3\weapons_f\ammo\UGL_slug";
+		explosionTime = -1;
+		timeToLive = 30;
+	};
+	class OEC_Ammo_CMB40mm_smokeGreen: SmokeShellGreen
+	{
+		model = "\A3\weapons_f\ammo\UGL_slug";
+		explosionTime = -1;
+		timeToLive = 30;
+	};
+	class OEC_Ammo_CMB40mm_smokeYellow: SmokeShellYellow
+	{
+		model = "\A3\weapons_f\ammo\UGL_slug";
+		explosionTime = -1;
+		timeToLive = 30;
+	};
+
 	// Cmb Stun Grenades
 	class OEC_Ammo_CMB20mm_stun: OEC_Ammo_CMB20mm
 	{
@@ -264,7 +340,7 @@ class CfgAmmo
 		indirectHit = 0;
 		indirectHitRange = 0;
 		typicalspeed = 70;
-		fuseDistance=2;
+		fuseDistance = 2;
 		explosionTime = -1;
 		ExplosionEffects = "RHS_flashbang_10";
 		explosive = 1;
@@ -296,6 +372,17 @@ class CfgAmmo
 		affectedByWind = 1;
 		flareSize = 20;
 		effectFlare = "RHS_FlareShell_Red";
+		aiAmmoUsageFlags = 0.5;
+	};
+
+	class F_40mm_Yellow;
+	class OEC_Ammo_CMB20mm_yellow: F_40mm_Yellow
+	{
+		brightness = 25; // def 12
+		timeToLive = 60; // def 25
+		intensity = 1000000;
+		affectedByWind = 1;
+		flareSize = 20;
 		aiAmmoUsageFlags = 0.5;
 	};
 

@@ -138,7 +138,7 @@ class CfgMagazines
     class 30Rnd_65x39_caseless_mag;
     class OEC_Magazine_WallhammerShotgun_8Rnd: 30Rnd_65x39_caseless_mag
     {
-        author = "Overwatch Expeditionary Corps";
+        author = "OEC Extension";
         scope = 2;
         displayName = "[OEC] 8Rnd Shotgun Coagulum Cell";
         displayNameShort = "Coagulum Cell";
