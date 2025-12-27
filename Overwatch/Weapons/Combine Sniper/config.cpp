@@ -6,6 +6,7 @@ class CfgPatches
     requiredAddons[] = 
     {
         "OEC_Extension_Overwatch_Weapons",
+		"OEC_Extension_Overwatch_Weapons_Acc",
         "rhsusf_c_weapons"
     };
     units[] = {};
@@ -57,7 +58,10 @@ class CfgWeapons
 			class CowsSlot{};
 			class MuzzleSlot{};
 			class UnderBarrelSlot{};
-			class PointerSlot{};
+			class PointerSlot
+			{
+				compatibleItems[] = {"OEC_pointer_blue"};
+			};
 		};
 
         modelOptics[] = {"\A3\Weapons_F\acc\reticle_lrps_F","\A3\Weapons_F\acc\reticle_lrps_z_F"};

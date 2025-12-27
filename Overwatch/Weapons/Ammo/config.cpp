@@ -227,7 +227,7 @@ class CfgAmmo
 		caliber = 75;
 		tracerScale = 2.5;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_yellow";
-		effectFly = "OEC_Light_AlienPulse_Orange_sRifle";
+		//effectFly = "OEC_Light_AlienPulse_Orange_sRifle";
 	};
 
 	// Pulse SMG Ammo
