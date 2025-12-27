@@ -234,6 +234,11 @@ class CfgVehicles
 				magazine = "OEC_Magazine_SPAS12_8Rnd_Slug";
 				count = 40;
 			};
+			class XX_OEC_Magazine_357
+			{
+				magazine = "OEC_Magazine_357";
+				count = 20;
+			};
 		};
 		class TransportWeapons
 		{

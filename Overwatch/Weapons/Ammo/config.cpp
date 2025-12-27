@@ -264,6 +264,45 @@ class CfgAmmo
 		suppressionRadiusHit = 4;
 	};
 
+	// .357 Magnum Ammo
+	class OEC_Ammo_357: BulletBase
+	{
+		hit = 20;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		cartridge = "FxCartridge_338_Ball";
+		audibleFire = 80;
+		visibleFireTime = 3;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 14;
+		suppressionRadiusBulletClose = 8;
+		suppressionRadiusHit = 10;
+		cost = 6;
+		airLock = 1;
+		caliber = 2;
+		typicalSpeed = 890;
+		timeToLive = 10;
+		model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
+		tracerScale = 1.2;
+		tracerStartTime = 0.075;
+		tracerEndTime = 1;
+		airFriction = -0.00061;
+		class CamShakeExplode
+		{
+			power = 3.16228;
+			duration = 0.6;
+			frequency = 20;
+			distance = 9.48683;
+		};
+		class CamShakeHit
+		{
+			power = 10;
+			duration = 0.4;
+			frequency = 20;
+			distance = 1;
+		};
+	};
+
     //Combine UGL Ammo
 	// Cmb HE
     class G_40mm_HE;

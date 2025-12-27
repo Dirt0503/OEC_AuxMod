@@ -54,7 +54,7 @@ class CfgWeapons
 		magazineWell[] = {};
 		class Library
 		{
-			libTextDesc = "Overwatch Standard Issue Handgun. Widely adopted by Civil Protection and Transhuman Arm.";
+			libTextDesc = "Overwatch Standard Issue Sidearm. Widely adopted by Civil Protection and Transhuman Arm.";
 		};
 		descriptionShort = "Semi-automatic pistol";
 		selectionfireanim = "muzzleFlash";
