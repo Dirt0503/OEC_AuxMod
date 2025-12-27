@@ -38,7 +38,7 @@ class CfgMagazines
         picture = "\OECExtension\Overwatch\Weapons\data\slugMag.paa";
         ammo = "OEC_Ammo_SPAS12_Slug";
         tracersEvery = 1;
-        mass = 15;
+        mass = 20;
     };
 };
 

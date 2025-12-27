@@ -22,7 +22,7 @@ class CfgMagazines
 		modelSpecialIsProxy = 1;
 		initspeed = 415;
 		count = 45;
-		mass = 4.5;
+		mass = 6;
 		tracersEvery = 0;
 		lastRoundsTracer = 10;
     };
